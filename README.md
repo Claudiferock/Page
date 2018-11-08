@@ -1,6 +1,7 @@
-<h1 align='center'> Portfolio Page </h1>
-This is my first attemp of creating a personal portfolio/cv page
+<h1 align='center'>Claudio's Portfolio Page </h1><br />
+<h2> This is my first attemp of creating a personal portfolio/cv page <h2>
 
+------------------------------  
 ## Status: Under construction
 This page currently shows only parts of the landing page. It includes some visual elements and animations using CSS.
 
