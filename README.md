@@ -1,10 +1,12 @@
-<h1 align='center'>Claudio's Portfolio Page </h1><br />
+# 
+<h1 align='center'> :cloud:Claudio's Portfolio Page:cloud:</h1> 
 
-### This is my first attemp of creating a personal portfolio/cv page
-<br />
+**Hi! Im' Claudio :squirrel: and this is my first attemp at creating a personal portfolio/cv page (You can find it [here](https://claudiferock.github.io/Page/))**
 
 ------------------------------  
-## Status: Under construction
+<br />
+
+## Site-Status: :construction: Under construction
 This page currently shows only parts of the landing page. It includes some visual elements and animations using CSS.
 
 ## Demo 
