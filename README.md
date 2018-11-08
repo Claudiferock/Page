@@ -1,5 +1,7 @@
 <h1 align='center'>Claudio's Portfolio Page </h1><br />
-<h2> This is my first attemp of creating a personal portfolio/cv page <h2>
+
+### This is my first attemp of creating a personal portfolio/cv page
+<br />
 
 ------------------------------  
 ## Status: Under construction
