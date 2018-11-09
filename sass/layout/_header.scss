@@ -1,0 +1,43 @@
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, rgba(10, 9, 12, 0.1), rgba($color-black, 0.1)),url(../img/hero.JPG);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    position: relative;
+
+    //this replaces a separate .header__profilePic-box {...}
+    &__profilePic-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+
+    // replace separate .header__profilePic {...}
+    &__profilePic {
+        height: 18rem;
+        border-radius: 1rem;
+        transition-property: border-radius, transform;
+        transition-duration: 1.3s, 1.1s;
+
+        // replace separate .header__profilePic:hover {...}
+        :hover {
+            transform:scale(1.2);
+            border-radius:10rem;
+        }
+    }
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $color-background-header;
+        width: 60vw;
+        margin-bottom: 6rem;
+        text-align: center;
+
+        h1 {
+            text-shadow: .2rem .1rem #858585;
+        }
+    }
+}

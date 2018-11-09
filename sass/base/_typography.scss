@@ -1,0 +1,32 @@
+body {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 300;
+    /*font-size: 16px;*/
+    line-height: 1.7;
+    padding: 3rem;
+    background: $color-background-linear
+}
+
+.heading-primary {
+    color: $color-white;
+
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 300;
+        animation-name: comeForth;
+        animation-duration: 2.3s;
+        animation-timing-function: ease-out;
+    }
+
+    &--sub {
+        display: block;
+        font-size: 2.8rem;
+        font-weight: 300;
+        animation-name: appear;
+        animation-duration: 1.5s;
+        animation-delay: .5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: backwards;
+    }
+}
