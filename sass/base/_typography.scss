@@ -4,7 +4,9 @@ body {
     /*font-size: 16px;*/
     line-height: 1.7;
     padding: 3rem;
-    background: $color-background-linear
+    background: linear-gradient(217deg, rgba(63, 94, 251,.8), rgba(255,0,0,0) 70.71%),
+    linear-gradient(127deg, rgba(89, 193, 115,.8), rgba(0,255,0,0) 70.71%),
+    linear-gradient(336deg, rgba(255, 195, 113,.8), rgba(0,0,255,0) 70.71%);
 }
 
 .heading-primary {
@@ -28,5 +30,56 @@ body {
         animation-delay: .5s;
         animation-timing-function: ease-in-out;
         animation-fill-mode: backwards;
+    }
+}
+
+.heading-secondary {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.5;
+    padding: 1rem 5rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, $color-green-dark, $color-pink);
+    border-radius: 0 500rem 10rem 0;
+    transition: all 1s;
+    
+    &:not(:hover) {
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+}
+
+.line {
+    background-image: linear-gradient(to right, $color-green-dark, $color-pink);
+    width: inherit;
+    height: .08rem;
+    opacity: .5;
+}
+
+[class^="col-"] {
+    transition: all 2s;
+    animation-fill-mode: backwards;
+    &:not(:hover) {
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    &:hover {
+        background-color: $color-black;
+    }
+}
+
+.heading-terciary {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: 1.6rem;
+
+    &:not(:last-child) {
+        margin-bottom: 3rem;
     }
 }

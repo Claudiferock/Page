@@ -1,6 +1,6 @@
 .row {
     max-width: $grid-width;
-    background-color: #eee;
+    background-color: transparent;
     margin: 0 auto;
 
     //everything except the last child
@@ -15,8 +15,8 @@
     // if you use "*" it uses any class that contains what's after the =
     // if you use "$" instead is for any class that ends with what's after =
     [class^="col-"] {
-        background-color: orangered;
         float: left;
+        color: $color-green-dark;
     
         &:not(:last-child) {
             margin-right: $gutter-horizontal;

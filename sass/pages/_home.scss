@@ -1,0 +1,7 @@
+.section-about {
+    background-color: rgba($color-grey-light-1, .4);
+    padding: 20rem 0;
+    border-radius: 0 0 2rem 2rem;
+    //use of margin-top to cover the polygon coming from the heading-primary
+    margin-top: -20vh;
+}
