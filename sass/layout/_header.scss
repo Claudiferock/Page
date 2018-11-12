@@ -21,7 +21,7 @@
         transition-duration: 1.3s, 1.1s;
 
         // replace separate .header__profilePic:hover {...}
-        :hover {
+        &:hover {
             transform:scale(1.2);
             border-radius:10rem;
         }
