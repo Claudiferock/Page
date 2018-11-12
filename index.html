@@ -26,12 +26,12 @@
                 -->
                 <span class="heading-primary--sub">Welcome to my page</span>
             </h1>
-            <a href="#" class="btn btn--white btn--animated">Discover what I've done</a>
+            <a href="#about" class="btn btn--white btn--animated">Discover what I've done</a>
         </div>
     </header>
 
     <main>
-        <section class="section-about">
+        <section class="section-about" id="about">
             <div class="u-margin-bottom-big">
                 <h2 class="heading-secondary">
                     About this page
@@ -47,7 +47,15 @@
                     <p class="paragraph">I've created this webpage so far only using HTML5 and CSS (Saas)</p>
                     <a href="#" class="btn-text">Learn more &rarr;</a>
                 </div>
-                <div class="col-1-of-2">col 1 of 2</div>
+                <div class="col-1-of-2">
+                    <div class="composition">
+                        <!--    emmet  .composition>(img.composition__photo.composition__photo--p1)*3
+                                BEM block element modifier -->
+                        <img src="img/drawing1.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
+                        <img src="img/drawing2.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
+                        <img src="img/drawing3.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+                    </div>
+                </div>
             </div>
         </section>
     </main>

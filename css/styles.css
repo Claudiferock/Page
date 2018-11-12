@@ -84,8 +84,7 @@ body {
   opacity: .5; }
 
 [class^="col-"] {
-  transition: all 2s;
-  animation-fill-mode: backwards; }
+  transition: all 2s; }
   [class^="col-"]:not(:hover) {
     -webkit-background-clip: text;
     color: transparent; }
@@ -181,6 +180,37 @@ body {
   .btn-text:active {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     transform: translateY(0px); }
+
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-idex: 10;
+    transition: all .2s;
+    outline-offset: 1.8rem; }
+    .composition__photo--p1 {
+      left: 8%;
+      top: -2rem;
+      transform: rotate(62deg); }
+    .composition__photo--p2 {
+      right: -2rem;
+      top: 0rem;
+      transform: rotate(105deg); }
+    .composition__photo--p3 {
+      left: 28%;
+      top: 3rem;
+      transform: rotate(90deg); }
+    .composition__photo:hover {
+      outline: 1rem solid #ff456a;
+      top: 1rem;
+      transform: scale(1.3) rotate(90deg);
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+      z-index: 20; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.92) rotate(90deg) translateY(-0.25rem); }
 
 .row {
   max-width: 114rem;

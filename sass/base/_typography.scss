@@ -60,7 +60,6 @@ body {
 
 [class^="col-"] {
     transition: all 2s;
-    animation-fill-mode: backwards;
     &:not(:hover) {
         -webkit-background-clip: text;
         color: transparent;
