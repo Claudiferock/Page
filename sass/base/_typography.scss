@@ -33,6 +33,18 @@ body {
     }
 }
 
+.disclaimer {
+    font-size: 3.5rem;
+    background-color: $color-black;
+    color: $color-orange;
+    padding: 2.5rem;
+    margin-top: -6rem;
+    margin-bottom: 6rem;
+    text-align: center;
+    letter-spacing: .7rem;
+    border-radius: .85rem;
+}
+
 .heading-secondary {
     font-size: 3rem;
     text-transform: uppercase;
