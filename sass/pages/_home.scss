@@ -5,3 +5,24 @@
     //use of margin-top to cover the polygon coming from the heading-primary
     margin-top: -20vh;
 }
+
+.section-features {
+    padding: 20rem 0;
+    background-image:linear-gradient(
+        to right bottom,
+        rgba($color-green-dark, .8),
+        rgba($color-green-dark, .8)
+    ), url(../img/small-green-world.jpg);
+    background-size: cover;
+    transform: skewY(-7deg);
+    margin-top: -20rem;
+
+    // universal selector (in this case) only selects all direct children of section-features
+    & > * {
+        transform: skewY(7deg);
+    }
+
+    h2 {
+        text-shadow: .2rem .1rem rgba($color-black, .2);
+    }
+}

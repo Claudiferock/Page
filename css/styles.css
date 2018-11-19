@@ -1,3 +1,21 @@
+/*
+0 - 600px: Phone
+600 - 900px: Tablet portrait
+900 - 1200px: Tablet landscape
+[1200 - 1800px] where normal styles apply
+1800px + : Big desktop
+*/
+/*
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + Typography > general layout + grid > page layout > components 
+
+1em = 16px
+*/
 @keyframes comeForth {
   0% {
     opacity: 0;
@@ -32,16 +50,31 @@ html {
   /* converted to  10px so it's easier to use rem values */
   /* 10px is 62.5% of the root default size (16px) */
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.26em) {
+    html {
+      font-size: 60%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 40%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 3rem; }
+  @media (max-width: 56.26em) {
+    body {
+      padding: 0; } }
 
 body {
   font-family: "Oxygen", sans-serif;
   font-weight: 300;
   /*font-size: 16px;*/
   line-height: 1.7;
-  padding: 3rem;
   background: linear-gradient(217deg, rgba(63, 94, 251, 0.8), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(89, 193, 115, 0.8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(255, 195, 113, 0.8), rgba(0, 0, 255, 0) 70.71%); }
 
 .heading-primary {
@@ -53,15 +86,24 @@ body {
     animation-name: comeForth;
     animation-duration: 2.3s;
     animation-timing-function: ease-out; }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        font-size: 5rem; } }
   .heading-primary--sub {
     display: block;
-    font-size: 2.8rem;
+    font-size: 3rem;
     font-weight: 300;
     animation-name: appear;
     animation-duration: 1.5s;
     animation-delay: .5s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: backwards; }
+    @media (max-width: 56.26em) {
+      .heading-primary--sub {
+        font-size: 2.5rem; } }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        font-size: 2rem; } }
 
 .disclaimer {
   font-size: 3.5rem;
@@ -91,7 +133,7 @@ body {
 .line {
   background-image: linear-gradient(to right, #588585, #ff456a);
   width: inherit;
-  height: .08rem;
+  height: .5rem;
   opacity: .5; }
 
 [class^="col-"] {
@@ -223,12 +265,35 @@ body {
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.92) rotate(90deg) translateY(-0.25rem); }
 
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: transform .3s; }
+  .feature-box__icon {
+    font-size: 6rem;
+    background-image: linear-gradient(to right, #588585, #ff456a);
+    display: inline-block;
+    -webkit-background-clip: text;
+    color: transparent; }
+  .feature-box:hover {
+    transform: translateY(-1rem) scale(1.2); }
+
 .row {
   max-width: 114rem;
   background-color: transparent;
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media (max-width: 56.26em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
+  @media (max-width: 56.26em) {
+    .row {
+      max-width: 70rem; } }
   .row::after {
     content: "";
     display: table;
@@ -238,6 +303,13 @@ body {
     color: #588585; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
+      @media (max-width: 56.26em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media (max-width: 56.26em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
@@ -258,15 +330,28 @@ body {
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative; }
+  @media (max-width: 37.5em) {
+    .header {
+      clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); } }
   .header__profilePic-box {
     position: absolute;
     top: 4rem;
     left: 4rem; }
+    @media (max-width: 37.5em) {
+      .header__profilePic-box {
+        margin-bottom: 8rem;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: 100; } }
   .header__profilePic {
     height: 18rem;
     border-radius: 1rem;
     transition-property: border-radius, transform;
     transition-duration: 1.3s, 1.1s; }
+    @media (max-width: 37.5em) {
+      .header__profilePic {
+        transform: scale(1.2);
+        border-radius: 10rem; } }
     .header__profilePic:hover {
       transform: scale(1.2);
       border-radius: 10rem; }
@@ -279,7 +364,12 @@ body {
     width: 60vw;
     margin-bottom: 6rem;
     text-align: center; }
-    .header__text-box h1 {
+    @media (max-width: 37.5em) {
+      .header__text-box {
+        margin-bottom: 8rem;
+        transform: translate(-50%, -20%); } }
+    .header__text-box h1,
+    .header__text-box h2 {
       text-shadow: .2rem .1rem #858585; }
 
 .section-about {
@@ -287,3 +377,14 @@ body {
   padding: 20rem 0;
   border-radius: 0 0 2rem 2rem;
   margin-top: -20vh; }
+
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(to right bottom, rgba(88, 133, 133, 0.8), rgba(88, 133, 133, 0.8)), url(../img/small-green-world.jpg);
+  background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -20rem; }
+  .section-features > * {
+    transform: skewY(7deg); }
+  .section-features h2 {
+    text-shadow: 0.2rem 0.1rem rgba(0, 0, 0, 0.2); }

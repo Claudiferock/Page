@@ -3,7 +3,6 @@ body {
     font-weight: 300;
     /*font-size: 16px;*/
     line-height: 1.7;
-    padding: 3rem;
     background: linear-gradient(217deg, rgba(63, 94, 251,.8), rgba(255,0,0,0) 70.71%),
     linear-gradient(127deg, rgba(89, 193, 115,.8), rgba(0,255,0,0) 70.71%),
     linear-gradient(336deg, rgba(255, 195, 113,.8), rgba(0,0,255,0) 70.71%);
@@ -18,18 +17,30 @@ body {
         font-weight: 300;
         animation-name: comeForth;
         animation-duration: 2.3s;
-        animation-timing-function: ease-out;
+        animation-timing-function: ease-out; 
+        
+        @include respond(phone) {
+            font-size: 5rem;
+        }
     }
 
     &--sub {
         display: block;
-        font-size: 2.8rem;
+        font-size: 3rem;
         font-weight: 300;
         animation-name: appear;
         animation-duration: 1.5s;
         animation-delay: .5s;
         animation-timing-function: ease-in-out;
         animation-fill-mode: backwards;
+
+        @include respond(tab-port) {
+            font-size: 2.5rem;
+        }
+
+        @include respond(phone) {
+            font-size: 2rem;
+        }
     }
 }
 
@@ -66,7 +77,7 @@ body {
 .line {
     background-image: linear-gradient(to right, $color-green-dark, $color-pink);
     width: inherit;
-    height: .08rem;
+    height: .5rem;
     opacity: .5;
 }
 
