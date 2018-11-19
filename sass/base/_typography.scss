@@ -19,8 +19,12 @@ body {
         animation-duration: 2.3s;
         animation-timing-function: ease-out; 
         
-        @include respond(phone) {
+        @include respond(phone-land) {
             font-size: 5rem;
+        }
+
+        @include respond(phone-port) {
+            font-size: 4rem;
         }
     }
 
@@ -33,13 +37,13 @@ body {
         animation-delay: .5s;
         animation-timing-function: ease-in-out;
         animation-fill-mode: backwards;
+        
+        @include respond(phone-land) {
+            font-size: 2rem;
+        }
 
         @include respond(tab-port) {
             font-size: 2.5rem;
-        }
-
-        @include respond(phone) {
-            font-size: 2rem;
         }
     }
 }
@@ -54,6 +58,12 @@ body {
     text-align: center;
     letter-spacing: .7rem;
     border-radius: .85rem;
+
+    @include respond(phone-land) {
+        font-size: 2.5rem;
+        padding: 1rem;
+        letter-spacing: 0;
+    }
 }
 
 .heading-secondary {
@@ -79,10 +89,14 @@ body {
     width: inherit;
     height: .5rem;
     opacity: .5;
+
+    @include respond(phone-land) {
+        height: .2rem;
+    }
 }
 
 [class^="col-"] {
-    transition: all 2s;
+    transition: all 1s;
     &:not(:hover) {
         -webkit-background-clip: text;
         color: transparent;
@@ -96,6 +110,10 @@ body {
     font-size: 1.6rem;
     font-weight: 700;
     text-transform: uppercase;
+
+    @include respond(phone-land) {
+        font-size: 2rem;
+    }
 }
 
 .paragraph {
@@ -103,5 +121,9 @@ body {
 
     &:not(:last-child) {
         margin-bottom: 3rem;
+    }
+
+    @include respond(phone-land) {
+        font-size: 2rem;
     }
 }

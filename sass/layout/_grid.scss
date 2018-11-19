@@ -29,17 +29,26 @@
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
 
-            @include respond(tab-port) {
+            @include respond(phone-land) {
                 margin-right: 0;
                 margin-bottom: $gutter-vertical-small;
             }
         }
-
+        
         @include respond(tab-port) {
             width: 100% !important;
         }
-    }
 
+        @include respond(phone-land) {
+            padding: $gutter-horizontal-small;
+        }
+        
+        @include respond(phone-port) {
+            padding: $gutter-horizontal;
+            width: 60%;
+        }
+    }
+    
     .col-1-of-2 {
         // if you want to use a sass-variable on CSS's calc function
         // you need to use #{$sass-variable}
