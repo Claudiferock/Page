@@ -14,19 +14,23 @@ html {
     font-size: 62.5%;           // 1rem = 10px; 10px/16px= 62.5%
     
     @include respond(tab-land) {    // width < 1200?
-        font-size: 56.25%;     // 1rem = 9px, 9px/16px = 56.25%
+        font-size: 60%;     // 1rem = 9.6px, 9.6px/16px = 60%
     }
 
     @include respond(tab-port) {    // width < 900?
-        font-size: 60%;         // 1rem = 8px, 8px/16px = 50%
+        font-size:  56.25%;         // 1rem = 9px, 9px/16px = 56.25%
     }
 
-    @include respond(phone-land) {    // width < 600?
+    @include respond(tab-port-small) {    // width < 768px?
+        font-size:  53%;         // 1rem = 8.5px, 8.5px/16px = 53,125%
+    }
+
+    @include respond(phone-land) {    // width < 576px?
         font-size: 50%;         // 1rem = 8px, 8px/16px = 50%
     }
 
     @include respond(phone-port) {    // width < 480?
-        font-size: 40%;         // 1rem = 8px, 8px/16px = 50%
+        font-size: 37.5%;         // 1rem = 6px, 6px/16px = 37.5%
     }
 
     @include respond(big-desktop) {

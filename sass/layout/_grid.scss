@@ -24,7 +24,7 @@
     // if you use "$" instead is for any class that ends with what's after =
     [class^="col-"] {
         float: left;
-        color: $color-green-dark;
+        color: $color-bluegreen;
     
         &:not(:last-child) {
             margin-right: $gutter-horizontal;

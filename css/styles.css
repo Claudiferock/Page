@@ -52,16 +52,19 @@ html {
   font-size: 62.5%; }
   @media (max-width: 75em) {
     html {
-      font-size: 56.25%; } }
+      font-size: 60%; } }
   @media (max-width: 56.26em) {
     html {
-      font-size: 60%; } }
-  @media (max-width: 37.5em) {
+      font-size: 56.25%; } }
+  @media (max-width: 48em) {
+    html {
+      font-size: 53%; } }
+  @media (max-width: 36em) {
     html {
       font-size: 50%; } }
   @media (max-width: 30em) {
     html {
-      font-size: 40%; } }
+      font-size: 37.5%; } }
   @media (min-width: 112.5em) {
     html {
       font-size: 75%; } }
@@ -89,7 +92,10 @@ body {
     animation-name: comeForth;
     animation-duration: 2.3s;
     animation-timing-function: ease-out; }
-    @media (max-width: 37.5em) {
+    @media (max-width: 48em) {
+      .heading-primary--main {
+        font-size: 5.5rem; } }
+    @media (max-width: 36em) {
       .heading-primary--main {
         font-size: 5rem; } }
     @media (max-width: 30em) {
@@ -104,7 +110,7 @@ body {
     animation-delay: .5s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: backwards; }
-    @media (max-width: 37.5em) {
+    @media (max-width: 36em) {
       .heading-primary--sub {
         font-size: 2rem; } }
     @media (max-width: 56.26em) {
@@ -114,14 +120,14 @@ body {
 .disclaimer {
   font-size: 3.5rem;
   background-color: #000;
-  color: #FF965E;
+  color: #E77538;
   padding: 2.5rem;
   margin-top: -6rem;
   margin-bottom: 6rem;
   text-align: center;
   letter-spacing: .7rem;
   border-radius: .85rem; }
-  @media (max-width: 37.5em) {
+  @media (max-width: 36em) {
     .disclaimer {
       font-size: 2.5rem;
       padding: 1rem;
@@ -146,7 +152,7 @@ body {
   width: inherit;
   height: .5rem;
   opacity: .5; }
-  @media (max-width: 37.5em) {
+  @media (max-width: 36em) {
     .line {
       height: .2rem; } }
 
@@ -162,7 +168,7 @@ body {
   font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase; }
-  @media (max-width: 37.5em) {
+  @media (max-width: 36em) {
     .heading-terciary {
       font-size: 2rem; } }
 
@@ -170,7 +176,7 @@ body {
   font-size: 1.6rem; }
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
-  @media (max-width: 37.5em) {
+  @media (max-width: 36em) {
     .paragraph {
       font-size: 2rem; } }
 
@@ -295,7 +301,7 @@ body {
   transition: transform .3s; }
   .feature-box__icon {
     font-size: 6rem;
-    background-image: linear-gradient(to right, #588585, #ff456a);
+    background-image: linear-gradient(to right, #6D9C39, #ff456a);
     display: inline-block;
     -webkit-background-clip: text;
     color: transparent; }
@@ -323,14 +329,14 @@ body {
     color: #588585; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
-      @media (max-width: 37.5em) {
+      @media (max-width: 36em) {
         .row [class^="col-"]:not(:last-child) {
           margin-right: 0;
           margin-bottom: 6rem; } }
     @media (max-width: 56.26em) {
       .row [class^="col-"] {
         width: 100% !important; } }
-    @media (max-width: 37.5em) {
+    @media (max-width: 36em) {
       .row [class^="col-"] {
         padding: 3rem; } }
     @media (max-width: 30em) {
@@ -357,7 +363,7 @@ body {
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative; }
-  @media (max-width: 37.5em) {
+  @media (max-width: 36em) {
     .header {
       clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); } }
   @media (max-width: 30em) {
@@ -367,7 +373,7 @@ body {
     position: absolute;
     top: 4rem;
     left: 4rem; }
-    @media (max-width: 37.5em) {
+    @media (max-width: 36em) {
       .header__profilePic-box {
         margin-bottom: 8rem;
         left: 50%;
@@ -375,31 +381,60 @@ body {
         z-index: 100; } }
   .header__profilePic {
     height: 18rem;
-    border-radius: 1rem;
+    outline: #c2e59c double 2rem;
+    outline-offset: 1rem;
+    border-radius: 10% / 50%;
     transition-property: border-radius, transform;
-    transition-duration: 1.3s, 1.1s; }
-    @media (max-width: 37.5em) {
+    transition-duration: 1.3s, 1.1s;
+    box-shadow: 0 0.2rem 0 0.15rem #ff456a; }
+    @media (max-width: 48em) {
+      .header__profilePic {
+        border-radius: 50% 6% / 23% 40%; } }
+    @media (max-width: 36em) {
       .header__profilePic {
         transform: scale(1.2);
-        border-radius: 10rem; } }
+        border-radius: 10rem;
+        outline: none;
+        box-shadow: 0 0.15rem 0 0.1rem #FF1845; } }
     @media (max-width: 30em) {
       .header__profilePic {
         transform: scale(1.2); } }
     .header__profilePic:hover {
       transform: scale(1.2);
-      border-radius: 10rem; }
+      border-radius: 10rem;
+      outline-offset: .6rem;
+      box-shadow: 0 0.15rem 0 0.1rem #FF1845;
+      outline: #dbf0c4 dashed 0.4rem;
+      animation-duration: 1.5s;
+      transition: all 1s; }
+      @media (max-width: 48em) {
+        .header__profilePic:hover {
+          text-shadow: .2rem .1rem #858585; } }
+      @media (max-width: 36em) {
+        .header__profilePic:hover {
+          outline: none; } }
   .header__text-box {
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(240, 151, 119, 0.3);
+    background-color: rgba(231, 117, 56, 0.5);
     width: 60vw;
     margin-bottom: 6rem;
     text-align: center; }
-    @media (max-width: 37.5em) {
+    @media (max-width: 56.26em) {
       .header__text-box {
         margin-bottom: 8rem;
+        width: 55vw;
+        transform: translate(-20%, -50%); } }
+    @media (max-width: 48em) {
+      .header__text-box {
+        margin-bottom: 8rem;
+        transform: translate(-25%, -50%); } }
+    @media (max-width: 36em) {
+      .header__text-box {
+        margin-bottom: 8rem;
+        width: 80vw;
         transform: translate(-50%, -5%); } }
     @media (max-width: 30em) {
       .header__text-box {
@@ -417,7 +452,7 @@ body {
 
 .section-features {
   padding: 20rem 0;
-  background-image: linear-gradient(to right bottom, rgba(88, 133, 133, 0.8), rgba(88, 133, 133, 0.8)), url(../img/small-green-world.jpg);
+  background-image: linear-gradient(to right bottom, rgba(109, 156, 57, 0.8), rgba(109, 156, 57, 0.8)), url(../img/small-green-world.jpg);
   background-size: cover;
   transform: skewY(-7deg);
   margin-top: -20rem; }
