@@ -365,7 +365,8 @@ body {
   position: relative; }
   @media (max-width: 36em) {
     .header {
-      clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); } }
+      clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+      height: 70vh; } }
   @media (max-width: 30em) {
     .header {
       clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
