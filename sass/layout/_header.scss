@@ -8,7 +8,6 @@
 
     @include respond(phone-land) {
         clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
-        height: 60vh;
     }
 
     @include respond(phone-port) {
