@@ -366,7 +366,7 @@ body {
   @media (max-width: 36em) {
     .header {
       clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
-      height: 70vh; } }
+      height: 60vh; } }
   @media (max-width: 30em) {
     .header {
       clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
@@ -427,11 +427,11 @@ body {
       .header__text-box {
         margin-bottom: 8rem;
         width: 55vw;
-        transform: translate(-20%, -50%); } }
+        transform: translate(-40%, -50%); } }
     @media (max-width: 48em) {
       .header__text-box {
         margin-bottom: 8rem;
-        transform: translate(-25%, -50%); } }
+        transform: translate(-45%, -50%); } }
     @media (max-width: 36em) {
       .header__text-box {
         margin-bottom: 8rem;

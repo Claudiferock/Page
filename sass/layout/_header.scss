@@ -8,7 +8,7 @@
 
     @include respond(phone-land) {
         clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
-        height: 70vh;
+        height: 60vh;
     }
 
     @include respond(phone-port) {
@@ -91,12 +91,12 @@
         @include respond(tab-port) {
             margin-bottom: $gutter-vertical;
             width: 55vw;
-            transform: translate(-20%, -50%);
+            transform: translate(-40%, -50%);
         }
 
         @include respond(tab-port-small) {
             margin-bottom: $gutter-vertical;
-            transform: translate(-25%, -50%);
+            transform: translate(-45%, -50%);
         }
 
         @include respond(phone-land) {
