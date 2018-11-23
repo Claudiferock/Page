@@ -358,7 +358,7 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(10, 9, 12, 0.1), rgba(0, 0, 0, 0.1)), url(../img/hero.JPG);
+  background-image: linear-gradient(to right bottom, rgba(10, 9, 12, 0.1), rgba(0, 0, 0, 0.1)), url(../img/hero-land-large.JPG);
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
@@ -373,6 +373,9 @@ body {
     position: absolute;
     top: 4rem;
     left: 4rem; }
+    @media (max-width: 75em) {
+      .header__profilePic-box {
+        transform: translate(20%, 20%); } }
     @media (max-width: 36em) {
       .header__profilePic-box {
         margin-bottom: 8rem;
@@ -417,20 +420,20 @@ body {
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-40%, -50%);
     background-color: rgba(231, 117, 56, 0.5);
     width: 60vw;
     margin-bottom: 6rem;
     text-align: center; }
-    @media (max-width: 56.26em) {
+    @media (max-width: 75em) {
       .header__text-box {
         margin-bottom: 8rem;
         width: 55vw;
-        transform: translate(-40%, -50%); } }
+        transform: translate(-25%, -50%); } }
     @media (max-width: 48em) {
       .header__text-box {
         margin-bottom: 8rem;
-        transform: translate(-45%, -50%); } }
+        transform: translate(-15%, -50%); } }
     @media (max-width: 36em) {
       .header__text-box {
         margin-bottom: 8rem;

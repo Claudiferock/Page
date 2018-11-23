@@ -1,6 +1,6 @@
 .header {
     height: 95vh;
-    background-image: linear-gradient(to right bottom, rgba(10, 9, 12, 0.1), rgba($color-black, 0.1)),url(../img/hero.JPG);
+    background-image: linear-gradient(to right bottom, rgba(10, 9, 12, 0.1), rgba($color-black, 0.1)),url(../img/hero-land-large.JPG);
     background-size: cover;
     background-position: top;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
@@ -19,6 +19,10 @@
         position: absolute;
         top: 4rem;
         left: 4rem;
+
+        @include respond(tab-land) {
+            transform: translate(20%, 20%);
+        }
 
         @include respond(phone-land) {
             margin-bottom: $gutter-vertical;
@@ -81,21 +85,21 @@
         position: absolute;
         top: 40%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-40%, -50%);
         background-color: rgba($color-orange-dark, .5);
         width: 60vw;
         margin-bottom: 6rem;
         text-align: center;
 
-        @include respond(tab-port) {
+        @include respond(tab-land) {
             margin-bottom: $gutter-vertical;
             width: 55vw;
-            transform: translate(-40%, -50%);
+            transform: translate(-25%, -50%);
         }
 
         @include respond(tab-port-small) {
             margin-bottom: $gutter-vertical;
-            transform: translate(-45%, -50%);
+            transform: translate(-15%, -50%);
         }
 
         @include respond(phone-land) {
