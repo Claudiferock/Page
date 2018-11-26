@@ -1,6 +1,6 @@
 /*
-0 - 600px: Phone
-600 - 900px: Tablet portrait
+0 - 576pxpx: Phone
+576px - 900px: Tablet portrait
 900 - 1200px: Tablet landscape
 [1200 - 1800px] where normal styles apply
 1800px + : Big desktop
@@ -358,11 +358,14 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(10, 9, 12, 0.1), rgba(0, 0, 0, 0.1)), url(../img/hero-land-large.JPG);
+  background-image: linear-gradient(to right bottom, rgba(10, 9, 12, 0.1), rgba(255, 150, 94, 0.6)), url(../img/hero-port-small.JPG);
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative; }
+  @media (min-resolution: 192dpi) and (min-width: 36em), (min-width: 30em) {
+    .header {
+      background-image: linear-gradient(to right bottom, rgba(10, 9, 12, 0.1), rgba(255, 69, 106, 0.6)), url(../img/hero-land-large.JPG); } }
   @media (max-width: 36em) {
     .header {
       clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); } }
