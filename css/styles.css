@@ -358,14 +358,14 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(10, 9, 12, 0.1), rgba(255, 150, 94, 0.6)), url(../../img/hero-port-small.jpg);
+  background-image: linear-gradient(to right bottom, rgba(10, 9, 12, 0.1), rgba(255, 150, 94, 0.6)), url("https://i.gyazo.com/63ce4032fc879e329d3b0b78fcc87dc4.jpg");
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative; }
   @media (min-width: 36em) {
     .header {
-      background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(../../img/hero-land-large.jpg); } }
+      background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("https://i.gyazo.com/6253a2f4e94eb1f0586a8e51a83ff269.jpg"); } }
   @media (max-width: 36em) {
     .header {
       clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); } }
