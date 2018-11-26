@@ -6,10 +6,6 @@
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     position: relative;
 
-    @media (min-width: 30em) {
-        background-image: linear-gradient(to right bottom, rgba(10, 9, 12, 0.1), rgba($color-green, 0.6)), url(../img/hero-land-large.JPG);
-    }
-
     @include respond(phone-land) {
         clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
     }

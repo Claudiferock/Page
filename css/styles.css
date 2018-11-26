@@ -363,9 +363,6 @@ body {
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative; }
-  @media (min-width: 30em) {
-    .header {
-      background-image: linear-gradient(to right bottom, rgba(10, 9, 12, 0.1), rgba(149, 193, 102, 0.6)), url(../img/hero-land-large.JPG); } }
   @media (max-width: 36em) {
     .header {
       clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); } }
