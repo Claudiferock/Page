@@ -107,6 +107,8 @@ body {
     }
     &:hover {
         background-color: $color-black;
+        color: $color-bluegreen !important;
+        text-shadow: none !important;
     }
 }
 

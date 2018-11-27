@@ -1,21 +1,34 @@
 .section-about {
-    background-color: rgba($color-grey-light-1, .4);
     padding: 20rem 0;
     border-radius: 0 0 2rem 2rem;
     //use of margin-top to cover the polygon coming from the heading-primary
     margin-top: -20vh;
+
+    @include respond(phone-port) {
+        padding-top: 20vh;
+    }
 }
 
 .section-features {
     padding: 20rem 0;
     background-image:linear-gradient(
-        to right bottom,
-        rgba($color-green-dark, .8),
-        rgba($color-green-dark, .8)
-    ), url(../img/small-green-world.jpg);
-    background-size: cover;
+        275deg,
+        rgba($color-black, .2),
+        rgba($color-pink-dark, .1)
+    );
+    background-size: fit;
     transform: skewY(-7deg);
     margin-top: -20rem;
+    padding-top: 30rem; 
+
+    @media (min-width: 30em) {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-black, .2),
+            rgba($color-orange, .4)
+        );
+        background-size: cover;
+    }
 
     // universal selector (in this case) only selects all direct children of section-features
     & > * {
