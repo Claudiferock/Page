@@ -365,7 +365,7 @@ body {
   position: relative; }
   @media (min-width: 30em) {
     .header {
-      background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.8)), url("https://i.gyazo.com/6253a2f4e94eb1f0586a8e51a83ff269.jpg"); } }
+      background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.8)), url("https://i.gyazo.com/6253a2f4e94eb1f0586a8e51a83ff269.jpg"); } }
   @media (max-width: 36em) {
     .header {
       height: 85vh;
