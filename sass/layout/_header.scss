@@ -1,13 +1,13 @@
 .header {
     height: 95vh;
-    background-image: linear-gradient(65deg, rgba($color-black, .8) 20%, rgba($color-orange, .6) 85%, rgba($color-black, .7) 50%, rgba($color-orange, .6) 95%), url("https://i.gyazo.com/63ce4032fc879e329d3b0b78fcc87dc4.jpg");
+    background-image: linear-gradient(65deg, rgba($color-black, .7) 20%, rgba($color-orange, .4) 85%, rgba($color-black, .5) 50%, rgba($color-orange, .4) 95%), url("https://i.gyazo.com/63ce4032fc879e329d3b0b78fcc87dc4.jpg");
     background-size: cover;
     background-position: top;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     position: relative;
 
     @media (min-width: 30em) {
-        background-image: linear-gradient(to right bottom, rgba(0,0,0,.05), rgba(0,0,0,.8)), url("https://i.gyazo.com/6253a2f4e94eb1f0586a8e51a83ff269.jpg");
+        background-image: linear-gradient(to right bottom, rgba(0,0,0,.25) 55%, rgba($color-orange, .65) 85%, rgba(0,0,0,.6) 40%, rgba($color-orange, .64) 9%), url("https://i.gyazo.com/6253a2f4e94eb1f0586a8e51a83ff269.jpg");
     }
 
     @include respond(phone-land) {
@@ -86,12 +86,12 @@
             }
 
             @include respond(phone-port) {
-                outline-offset: -1.8rem;
-                outline: $color-pink dotted .5rem;
+                outline-offset: -1.2rem;
+                outline: $color-pink double .8rem;
                 box-shadow: 0 .15rem 0 .1rem $color-pink-dark, .1rem .3rem 5rem .2rem $color-orange;
-                border: dotted 1rem;
+                border: double 4rem;
                 border-color: $color-black;
-                transform: rotate(75deg);
+                transform: rotate(65deg);
                 transition: all 2s;
             }
         }
