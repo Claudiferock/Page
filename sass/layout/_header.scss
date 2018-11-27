@@ -62,7 +62,6 @@
 
         @include respond(phone-port) {
             transform:scale(1.1);
-
         }
 
         // replace separate .header__profilePic:hover {...}
@@ -84,6 +83,16 @@
 
             @include respond(phone-land) {
                 outline: none;
+            }
+
+            @include respond(phone-port) {
+                outline-offset: -1.8rem;
+                outline: $color-pink dotted .5rem;
+                box-shadow: 0 .15rem 0 .1rem $color-pink-dark, .1rem .3rem 5rem .2rem $color-orange;
+                border: dotted 1rem;
+                border-color: $color-black;
+                transform: rotate(75deg);
+                transition: all 2s;
             }
         }
     }

@@ -427,6 +427,15 @@ body {
       @media (max-width: 36em) {
         .header__profilePic:hover {
           outline: none; } }
+      @media (max-width: 30em) {
+        .header__profilePic:hover {
+          outline-offset: -1.8rem;
+          outline: #ff456a dotted 0.5rem;
+          box-shadow: 0 0.15rem 0 0.1rem #FF1845, 0.1rem 0.3rem 5rem 0.2rem #FF965E;
+          border: dotted 1rem;
+          border-color: #000;
+          transform: rotate(75deg);
+          transition: all 2s; } }
   .header__text-box {
     position: absolute;
     top: 40%;
