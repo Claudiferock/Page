@@ -79,20 +79,23 @@
 
             @include respond(tab-port-small) {
                 text-shadow: .2rem .1rem #858585;
+                outline: lighten($color-blue-dark, 30%) dashed .35rem;
             }
 
             @include respond(phone-land) {
+                box-shadow: 0 .15rem .4rem .1rem $color-pink-dark, .1rem .3rem 5rem .2rem $color-orange;
+                transition: all .5s ease-in;
                 outline: none;
             }
 
             @include respond(phone-port) {
                 outline-offset: -1.2rem;
-                outline: $color-pink double .8rem;
+                outline: $color-pink double 1.2rem;
                 box-shadow: 0 .15rem 0 .1rem $color-pink-dark, .1rem .3rem 5rem .2rem $color-orange;
-                border: double 4rem;
+                border: double 6rem;
                 border-color: $color-black;
-                transform: rotate(65deg);
-                transition: all 2s;
+                transition: all 5s;
+                animation: spin infinite 3.5s cubic-bezier(.42,1.06,.63,-0.74);
             }
         }
     }

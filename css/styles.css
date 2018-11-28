@@ -38,6 +38,12 @@ ORDER: Base + Typography > general layout + grid > page layout > components
   100% {
     opacity: 1; } }
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
 *,
 *::after,
 *::before {
@@ -423,19 +429,22 @@ body {
       transition: all 1s; }
       @media only screen and (max-width: 48em) {
         .header__profilePic:hover {
-          text-shadow: .2rem .1rem #858585; } }
+          text-shadow: .2rem .1rem #858585;
+          outline: #37a0f8 dashed 0.35rem; } }
       @media only screen and (max-width: 36em) {
         .header__profilePic:hover {
+          box-shadow: 0 0.15rem 0.4rem 0.1rem #FF1845, 0.1rem 0.3rem 5rem 0.2rem #FF965E;
+          transition: all .5s ease-in;
           outline: none; } }
       @media only screen and (max-width: 30em) {
         .header__profilePic:hover {
           outline-offset: -1.2rem;
-          outline: #ff456a double 0.8rem;
+          outline: #ff456a double 1.2rem;
           box-shadow: 0 0.15rem 0 0.1rem #FF1845, 0.1rem 0.3rem 5rem 0.2rem #FF965E;
-          border: double 4rem;
+          border: double 6rem;
           border-color: #000;
-          transform: rotate(65deg);
-          transition: all 2s; } }
+          transition: all 5s;
+          animation: spin infinite 3.5s cubic-bezier(0.42, 1.06, 0.63, -0.74); } }
   .header__text-box {
     position: absolute;
     top: 40%;
