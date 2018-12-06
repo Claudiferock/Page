@@ -288,7 +288,7 @@ body {
       .composition__photo {
         width: 55%; } }
     .composition__photo--p1 {
-      left: 8%;
+      left: 3%;
       top: -2rem;
       transform: rotate(62deg); }
     .composition__photo--p2 {
@@ -296,7 +296,7 @@ body {
       top: 0rem;
       transform: rotate(105deg); }
     .composition__photo--p3 {
-      left: 28%;
+      left: 19%;
       top: 3rem;
       transform: rotate(90deg); }
     .composition__photo:hover {
