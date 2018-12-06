@@ -7,7 +7,7 @@
     position: relative;
 
     @media (min-width: 30em) {
-        background-image: linear-gradient(to right bottom, rgba(0,0,0,.25) 55%, rgba($color-orange, .65) 85%, rgba(0,0,0,.6) 40%, rgba($color-orange, .64) 9%), url("https://i.gyazo.com/6253a2f4e94eb1f0586a8e51a83ff269.jpg");
+        background-image: linear-gradient(to right bottom, rgba(0,0,0,.25) 55%, rgba($color-orange, .62) 85%, rgba(0,0,0,.25) 85.4%, rgba($color-orange, .68) 9%), url("https://i.gyazo.com/6253a2f4e94eb1f0586a8e51a83ff269.jpg");
     }
 
     @include respond(phone-land) {

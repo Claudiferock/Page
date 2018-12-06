@@ -9,7 +9,7 @@
 
     &__icon {
         font-size: 6rem;
-        background-image: linear-gradient(to right, $color-green-dark, $color-pink);
+        background-image: linear-gradient(to right, $color-green-light, $color-pink);
         display: inline-block;
         -webkit-background-clip: text;
         color: transparent;
@@ -21,7 +21,7 @@
     }
 
     &__text {
-
+        color: $color-grey-light-1;
     }
     
 }

@@ -140,7 +140,7 @@ body {
       letter-spacing: 0; } }
   .disclaimer::before, .disclaimer::after {
     content: '';
-    background: red;
+    background: linear-gradient(to bottom, #ff6666 0.01%, red 98%, #ff6666 100%);
     display: block;
     width: 100%;
     height: .4rem;
@@ -318,13 +318,15 @@ body {
   transition: transform .3s; }
   .feature-box__icon {
     font-size: 6rem;
-    background-image: linear-gradient(to right, #6D9C39, #ff456a);
+    background-image: linear-gradient(to right, #c2e59c, #ff456a);
     display: inline-block;
     -webkit-background-clip: text;
     color: transparent; }
   .feature-box:hover {
     transform: translateY(-1rem) scale(1.2);
     color: white; }
+  .feature-box__text {
+    color: #f7f7f7; }
 
 .row {
   max-width: 114rem;
@@ -387,7 +389,7 @@ body {
   position: relative; }
   @media (min-width: 30em) {
     .header {
-      background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.25) 55%, rgba(255, 150, 94, 0.65) 85%, rgba(0, 0, 0, 0.6) 40%, rgba(255, 150, 94, 0.64) 9%), url("https://i.gyazo.com/6253a2f4e94eb1f0586a8e51a83ff269.jpg"); } }
+      background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.25) 55%, rgba(255, 150, 94, 0.62) 85%, rgba(0, 0, 0, 0.25) 85.4%, rgba(255, 150, 94, 0.68) 9%), url("https://i.gyazo.com/6253a2f4e94eb1f0586a8e51a83ff269.jpg"); } }
   @media only screen and (max-width: 36em) {
     .header {
       height: 85vh;
