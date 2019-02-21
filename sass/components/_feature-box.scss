@@ -19,6 +19,9 @@
     &:hover {
         transform: translateY(-1rem) scale(1.2);
         color:white;
+        border:.24rem solid lighten($color-pink, 5%);
+        border-radius:1rem;
+        transition: all 145ms;
     }
 
     &__text {

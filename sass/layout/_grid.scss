@@ -57,7 +57,7 @@
             background-color: $color-black;
         }
         width: calc((100% - #{$gutter-horizontal}) / 2);
-        color: $color-bluegreen !important;
+        color: lighten($color-bluegreen, 15%);
         padding: $gutter-horizontal-small;
         border-radius: 1rem;
     }
