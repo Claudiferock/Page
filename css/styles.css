@@ -152,13 +152,19 @@ body {
   font-weight: 700;
   line-height: 1.5;
   padding: 1rem 5rem;
-  display: inline-block;
+  display: inline-block; }
+
+[class^="section-"] .heading-secondary {
   background-image: linear-gradient(to right, #588585, #ff456a);
+  -webkit-background-clip: text;
   border-radius: 0 500rem 10rem 0;
+  color: transparent; }
+
+[class^="section-"]:hover .heading-secondary {
+  background-image: linear-gradient(to right, #588585, #ff456a);
+  -webkit-background-clip: unset;
+  color: black;
   transition: all 1s; }
-  .heading-secondary:not(:hover) {
-    -webkit-background-clip: text;
-    color: transparent; }
 
 .line {
   background-image: linear-gradient(to right, #588585, #ff456a);
