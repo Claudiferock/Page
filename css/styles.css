@@ -125,14 +125,14 @@ body {
 
 .disclaimer {
   font-size: 3.5rem;
-  background-color: #000;
-  color: #E77538;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgba(231, 117, 56, 0.9);
   padding: 2.5rem;
   margin-top: -6rem;
   margin-bottom: 6rem;
   text-align: center;
   letter-spacing: .7rem;
-  border-radius: .85rem; }
+  border-radius: .2rem .2rem 4.5rem 4.5rem; }
   @media only screen and (max-width: 36em) {
     .disclaimer {
       font-size: 2.5rem;
@@ -140,7 +140,7 @@ body {
       letter-spacing: 0; } }
   .disclaimer::before, .disclaimer::after {
     content: '';
-    background: linear-gradient(to bottom, #ff6666 0.01%, red 98%, #ff6666 100%);
+    background: rgba(255, 0, 0, 0.6);
     display: block;
     width: 100%;
     height: .4rem;
@@ -321,7 +321,7 @@ body {
   height: 40rem;
   text-align: center;
   border-radius: 3px;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.4);
   transition: transform .3s; }
   .feature-box__icon {
     font-size: 6rem;
@@ -334,7 +334,8 @@ body {
     color: white;
     border: 0.24rem solid #ff5f7e;
     border-radius: 1rem;
-    transition: all 145ms; }
+    transition: all 145ms;
+    box-shadow: 0.5rem 2rem 4rem rgba(0, 0, 0, 0.6); }
   .feature-box__text {
     color: #f7f7f7; }
 
@@ -378,7 +379,8 @@ body {
     padding: 3rem;
     border-radius: 1rem; }
     .row .col-1-of-2:not(:last-child) {
-      background-color: #000; }
+      background-color: #000;
+      box-shadow: 2rem 5rem 4rem rgba(0, 0, 0, 0.6); }
   .row .col-1-of-3 {
     width: calc((100% - 2 * 6rem) /3); }
   .row .col-2-of-3 {

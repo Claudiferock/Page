@@ -55,6 +55,7 @@
         // you need to use #{$sass-variable}
         &:not(:last-child) {
             background-color: $color-black;
+            box-shadow: 2rem 5rem 4rem rgba($color-black, .6);
         }
         width: calc((100% - #{$gutter-horizontal}) / 2);
         color: lighten($color-bluegreen, 15%);

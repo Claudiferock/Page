@@ -5,7 +5,7 @@
     height: 40rem;
     text-align:center;
     border-radius:3px;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    box-shadow: 0 1.5rem 3rem rgba($color-black, .4);
     transition: transform .3s;
 
     &__icon {
@@ -22,6 +22,7 @@
         border:.24rem solid lighten($color-pink, 5%);
         border-radius:1rem;
         transition: all 145ms;
+        box-shadow: .5rem 2rem 4rem rgba($color-black, .6);
     }
 
     &__text {
