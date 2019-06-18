@@ -1,6 +1,6 @@
 /*
-0 - 600px: Phone
-600 - 900px: Tablet portrait
+0 - 576pxpx: Phone
+576px - 900px: Tablet portrait
 900 - 1200px: Tablet landscape
 [1200 - 1800px] where normal styles apply
 1800px + : Big desktop
@@ -38,6 +38,12 @@ ORDER: Base + Typography > general layout + grid > page layout > components
   100% {
     opacity: 1; } }
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
 *,
 *::after,
 *::before {
@@ -50,29 +56,29 @@ html {
   /* converted to  10px so it's easier to use rem values */
   /* 10px is 62.5% of the root default size (16px) */
   font-size: 62.5%; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     html {
       font-size: 60%; } }
-  @media (max-width: 56.26em) {
+  @media only screen and (max-width: 56.26em) {
     html {
       font-size: 56.25%; } }
-  @media (max-width: 48em) {
+  @media only screen and (max-width: 48em) {
     html {
       font-size: 53%; } }
-  @media (max-width: 36em) {
+  @media only screen and (max-width: 36em) {
     html {
       font-size: 50%; } }
-  @media (max-width: 30em) {
+  @media only screen and (max-width: 30em) {
     html {
       font-size: 37.5%; } }
-  @media (min-width: 112.5em) {
+  @media only screen and (min-width: 112.5em) {
     html {
       font-size: 75%; } }
 
 body {
   box-sizing: border-box;
   padding: 3rem; }
-  @media (max-width: 56.26em) {
+  @media only screen and (max-width: 56.26em) {
     body {
       padding: 0; } }
 
@@ -92,13 +98,13 @@ body {
     animation-name: comeForth;
     animation-duration: 2.3s;
     animation-timing-function: ease-out; }
-    @media (max-width: 48em) {
+    @media only screen and (max-width: 48em) {
       .heading-primary--main {
         font-size: 5.5rem; } }
-    @media (max-width: 36em) {
+    @media only screen and (max-width: 36em) {
       .heading-primary--main {
         font-size: 5rem; } }
-    @media (max-width: 30em) {
+    @media only screen and (max-width: 30em) {
       .heading-primary--main {
         font-size: 4rem; } }
   .heading-primary--sub {
@@ -110,28 +116,35 @@ body {
     animation-delay: .5s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: backwards; }
-    @media (max-width: 36em) {
+    @media only screen and (max-width: 36em) {
       .heading-primary--sub {
         font-size: 2rem; } }
-    @media (max-width: 56.26em) {
+    @media only screen and (max-width: 56.26em) {
       .heading-primary--sub {
         font-size: 2.5rem; } }
 
 .disclaimer {
   font-size: 3.5rem;
-  background-color: #000;
-  color: #E77538;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgba(231, 117, 56, 0.9);
   padding: 2.5rem;
   margin-top: -6rem;
   margin-bottom: 6rem;
   text-align: center;
   letter-spacing: .7rem;
-  border-radius: .85rem; }
-  @media (max-width: 36em) {
+  border-radius: .2rem .2rem 4.5rem 4.5rem; }
+  @media only screen and (max-width: 36em) {
     .disclaimer {
       font-size: 2.5rem;
       padding: 1rem;
       letter-spacing: 0; } }
+  .disclaimer::before, .disclaimer::after {
+    content: '';
+    background: rgba(255, 0, 0, 0.6);
+    display: block;
+    width: 100%;
+    height: .4rem;
+    border-radius: 0rem .5rem; }
 
 .heading-secondary {
   font-size: 3rem;
@@ -139,36 +152,39 @@ body {
   font-weight: 700;
   line-height: 1.5;
   padding: 1rem 5rem;
-  display: inline-block;
+  display: inline-block; }
+
+[class^="section-"] .heading-secondary {
   background-image: linear-gradient(to right, #588585, #ff456a);
+  -webkit-background-clip: text;
   border-radius: 0 500rem 10rem 0;
+  color: transparent; }
+
+[class^="section-"]:hover .heading-secondary {
+  background-image: linear-gradient(to right, #588585, #ff456a);
+  -webkit-background-clip: unset;
+  color: black;
   transition: all 1s; }
-  .heading-secondary:not(:hover) {
-    -webkit-background-clip: text;
-    color: transparent; }
 
 .line {
   background-image: linear-gradient(to right, #588585, #ff456a);
   width: inherit;
   height: .5rem;
   opacity: .5; }
-  @media (max-width: 36em) {
+  @media only screen and (max-width: 36em) {
     .line {
       height: .2rem; } }
 
 [class^="col-"] {
-  transition: all 1s; }
-  [class^="col-"]:not(:hover) {
-    -webkit-background-clip: text;
-    color: transparent; }
-  [class^="col-"]:hover {
-    background-color: #000; }
+  transition: all 1s;
+  font-weight: 400;
+  letter-spacing: 0.0625em; }
 
 .heading-terciary {
   font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase; }
-  @media (max-width: 36em) {
+  @media only screen and (max-width: 36em) {
     .heading-terciary {
       font-size: 2rem; } }
 
@@ -176,7 +192,7 @@ body {
   font-size: 1.6rem; }
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
-  @media (max-width: 36em) {
+  @media only screen and (max-width: 36em) {
     .paragraph {
       font-size: 2rem; } }
 
@@ -261,17 +277,24 @@ body {
     transform: translateY(0px); }
 
 .composition {
-  position: relative; }
+  position: relative;
+  margin-top: 12rem; }
   .composition__photo {
-    width: 55%;
+    width: 68%;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
     border-radius: 2px;
     position: absolute;
     z-index: 10;
     transition: all .2s;
     outline-offset: 1.8rem; }
+    @media only screen and (min-width: 112.5em) {
+      .composition__photo {
+        width: 85%; } }
+    @media only screen and (max-width: 56.26em) {
+      .composition__photo {
+        width: 55%; } }
     .composition__photo--p1 {
-      left: 8%;
+      left: -16%;
       top: -2rem;
       transform: rotate(62deg); }
     .composition__photo--p2 {
@@ -279,7 +302,7 @@ body {
       top: 0rem;
       transform: rotate(105deg); }
     .composition__photo--p3 {
-      left: 28%;
+      left: 9%;
       top: 3rem;
       transform: rotate(90deg); }
     .composition__photo:hover {
@@ -292,21 +315,29 @@ body {
     transform: scale(0.92) rotate(90deg) translateY(-0.25rem); }
 
 .feature-box {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(58, 87, 87, 0.8);
   font-size: 1.5rem;
   padding: 2.5rem;
+  height: 40rem;
   text-align: center;
   border-radius: 3px;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.4);
   transition: transform .3s; }
   .feature-box__icon {
     font-size: 6rem;
-    background-image: linear-gradient(to right, #6D9C39, #ff456a);
+    background-image: linear-gradient(to right, #c2e59c, #ff456a);
     display: inline-block;
     -webkit-background-clip: text;
     color: transparent; }
   .feature-box:hover {
-    transform: translateY(-1rem) scale(1.2); }
+    transform: translateY(-1rem) scale(1.2);
+    color: white;
+    border: 0.24rem solid #ff5f7e;
+    border-radius: 1rem;
+    transition: all 145ms;
+    box-shadow: 0.5rem 2rem 4rem rgba(0, 0, 0, 0.6); }
+  .feature-box__text {
+    color: #f7f7f7; }
 
 .row {
   max-width: 114rem;
@@ -314,10 +345,10 @@ body {
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
-    @media (max-width: 56.26em) {
+    @media only screen and (max-width: 56.26em) {
       .row:not(:last-child) {
         margin-bottom: 6rem; } }
-  @media (max-width: 56.26em) {
+  @media only screen and (max-width: 56.26em) {
     .row {
       max-width: 70rem; } }
   .row::after {
@@ -325,26 +356,31 @@ body {
     display: table;
     clear: both; }
   .row [class^="col-"] {
-    float: left;
-    color: #588585; }
+    float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
-      @media (max-width: 36em) {
+      @media only screen and (max-width: 36em) {
         .row [class^="col-"]:not(:last-child) {
           margin-right: 0;
           margin-bottom: 6rem; } }
-    @media (max-width: 56.26em) {
+    @media only screen and (max-width: 56.26em) {
       .row [class^="col-"] {
         width: 100% !important; } }
-    @media (max-width: 36em) {
+    @media only screen and (max-width: 36em) {
       .row [class^="col-"] {
         padding: 3rem; } }
-    @media (max-width: 30em) {
+    @media only screen and (max-width: 30em) {
       .row [class^="col-"] {
         padding: 6rem;
         width: 60%; } }
   .row .col-1-of-2 {
-    width: calc((100% - 6rem) / 2); }
+    width: calc((100% - 6rem) / 2);
+    color: #7faaaa;
+    padding: 3rem;
+    border-radius: 1rem; }
+    .row .col-1-of-2:not(:last-child) {
+      background-color: #000;
+      box-shadow: 2rem 5rem 4rem rgba(0, 0, 0, 0.6); }
   .row .col-1-of-3 {
     width: calc((100% - 2 * 6rem) /3); }
   .row .col-2-of-3 {
@@ -358,22 +394,30 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(10, 9, 12, 0.1), rgba(0, 0, 0, 0.1)), url(../img/hero.JPG);
+  background-image: linear-gradient(65deg, rgba(0, 0, 0, 0.7) 20%, rgba(255, 150, 94, 0.4) 85%, rgba(0, 0, 0, 0.5) 50%, rgba(255, 150, 94, 0.4) 95%), url("https://i.gyazo.com/63ce4032fc879e329d3b0b78fcc87dc4.jpg");
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative; }
-  @media (max-width: 36em) {
+  @media (min-width: 30em) {
     .header {
-      clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); } }
-  @media (max-width: 30em) {
+      background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.25) 55%, rgba(255, 150, 94, 0.62) 85%, rgba(0, 0, 0, 0.25) 85.4%, rgba(255, 150, 94, 0.68) 9%), url("https://i.gyazo.com/6253a2f4e94eb1f0586a8e51a83ff269.jpg"); } }
+  @media only screen and (max-width: 36em) {
     .header {
-      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
+      height: 85vh;
+      clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%); } }
+  @media only screen and (max-width: 30em) {
+    .header {
+      height: 65vh;
+      clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 100%); } }
   .header__profilePic-box {
     position: absolute;
     top: 4rem;
     left: 4rem; }
-    @media (max-width: 36em) {
+    @media only screen and (max-width: 75em) {
+      .header__profilePic-box {
+        transform: translate(20%, 20%); } }
+    @media only screen and (max-width: 36em) {
       .header__profilePic-box {
         margin-bottom: 8rem;
         left: 50%;
@@ -387,18 +431,18 @@ body {
     transition-property: border-radius, transform;
     transition-duration: 1.3s, 1.1s;
     box-shadow: 0 0.2rem 0 0.15rem #ff456a; }
-    @media (max-width: 48em) {
+    @media only screen and (max-width: 48em) {
       .header__profilePic {
         border-radius: 50% 6% / 23% 40%; } }
-    @media (max-width: 36em) {
+    @media only screen and (max-width: 36em) {
       .header__profilePic {
         transform: scale(1.2);
         border-radius: 10rem;
         outline: none;
         box-shadow: 0 0.15rem 0 0.1rem #FF1845; } }
-    @media (max-width: 30em) {
+    @media only screen and (max-width: 30em) {
       .header__profilePic {
-        transform: scale(1.2); } }
+        transform: scale(1.1); } }
     .header__profilePic:hover {
       transform: scale(1.2);
       border-radius: 10rem;
@@ -407,55 +451,80 @@ body {
       outline: #dbf0c4 dashed 0.4rem;
       animation-duration: 1.5s;
       transition: all 1s; }
-      @media (max-width: 48em) {
+      @media only screen and (max-width: 48em) {
         .header__profilePic:hover {
-          text-shadow: .2rem .1rem #858585; } }
-      @media (max-width: 36em) {
+          text-shadow: .2rem .1rem #858585;
+          outline: #37a0f8 dashed 0.35rem; } }
+      @media only screen and (max-width: 36em) {
         .header__profilePic:hover {
+          box-shadow: 0 0.15rem 0.4rem 0.1rem #FF1845, 0.1rem 0.3rem 5rem 0.2rem #FF965E;
+          transition: all .5s ease-in;
           outline: none; } }
+      @media only screen and (max-width: 30em) {
+        .header__profilePic:hover {
+          outline-offset: -1.2rem;
+          outline: #ff456a double 1.2rem;
+          box-shadow: 0 0.15rem 0 0.1rem #FF1845, 0.1rem 0.3rem 5rem 0.2rem #FF965E;
+          border: double 6rem;
+          border-color: #000;
+          transition: all 5s;
+          animation: spin infinite 3.5s cubic-bezier(0.42, 1.06, 0.63, -0.74); } }
   .header__text-box {
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-40%, -50%);
     background-color: rgba(231, 117, 56, 0.5);
     width: 60vw;
     margin-bottom: 6rem;
     text-align: center; }
-    @media (max-width: 56.26em) {
+    @media only screen and (max-width: 75em) {
       .header__text-box {
         margin-bottom: 8rem;
         width: 55vw;
-        transform: translate(-40%, -50%); } }
-    @media (max-width: 48em) {
+        transform: translate(-25%, -50%); } }
+    @media only screen and (max-width: 48em) {
       .header__text-box {
         margin-bottom: 8rem;
-        transform: translate(-45%, -50%); } }
-    @media (max-width: 36em) {
+        transform: translate(-15%, -50%); } }
+    @media only screen and (max-width: 36em) {
       .header__text-box {
         margin-bottom: 8rem;
         width: 80vw;
         transform: translate(-50%, -5%); } }
-    @media (max-width: 30em) {
+    @media only screen and (max-width: 30em) {
       .header__text-box {
         margin-bottom: 8rem;
-        transform: translate(-50%, -20%); } }
+        transform: translate(-50%, -5%); } }
     .header__text-box h1,
     .header__text-box h2 {
       text-shadow: .2rem .1rem #858585; }
 
 .section-about {
-  background-color: rgba(247, 247, 247, 0.4);
   padding: 20rem 0;
   border-radius: 0 0 2rem 2rem;
   margin-top: -20vh; }
+  @media only screen and (max-width: 30em) {
+    .section-about {
+      padding-top: 20vh; } }
 
 .section-features {
   padding: 20rem 0;
-  background-image: linear-gradient(to right bottom, rgba(109, 156, 57, 0.8), rgba(109, 156, 57, 0.8)), url(../img/small-green-world.jpg);
-  background-size: cover;
+  background-image: linear-gradient(275deg, rgba(0, 0, 0, 0.2), rgba(255, 24, 69, 0.1));
+  background-size: fit;
   transform: skewY(-7deg);
-  margin-top: -20rem; }
+  margin-top: 20rem;
+  padding-top: 10rem; }
+  @media (min-width: 30em) {
+    .section-features {
+      background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.2), rgba(255, 150, 94, 0.4));
+      background-size: cover;
+      margin-top: 10rem;
+      padding-top: 10rem; } }
+  @media (min-width: 56.26em) {
+    .section-features {
+      margin-top: -10rem;
+      padding-top: 10rem; } }
   .section-features > * {
     transform: skewY(7deg); }
   .section-features h2 {

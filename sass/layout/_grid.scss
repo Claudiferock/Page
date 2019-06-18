@@ -24,7 +24,8 @@
     // if you use "$" instead is for any class that ends with what's after =
     [class^="col-"] {
         float: left;
-        color: $color-bluegreen;
+        //color: $color-grey-light-1;
+        //text-shadow: 1px 1px 2px $color-grey-dark;
     
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
@@ -52,7 +53,14 @@
     .col-1-of-2 {
         // if you want to use a sass-variable on CSS's calc function
         // you need to use #{$sass-variable}
+        &:not(:last-child) {
+            background-color: $color-black;
+            box-shadow: 2rem 5rem 4rem rgba($color-black, .6);
+        }
         width: calc((100% - #{$gutter-horizontal}) / 2);
+        color: lighten($color-bluegreen, 15%);
+        padding: $gutter-horizontal-small;
+        border-radius: 1rem;
     }
 
     .col-1-of-3 {

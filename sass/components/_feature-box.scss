@@ -1,15 +1,16 @@
 .feature-box {
-    background-color: rgba($color-white, .8);
+    background-color: darken(rgba($color-bluegreen, .8), 15%);
     font-size:1.5rem;
     padding:2.5rem;
+    height: 40rem;
     text-align:center;
     border-radius:3px;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    box-shadow: 0 1.5rem 3rem rgba($color-black, .4);
     transition: transform .3s;
 
     &__icon {
         font-size: 6rem;
-        background-image: linear-gradient(to right, $color-green-dark, $color-pink);
+        background-image: linear-gradient(to right, $color-green-light, $color-pink);
         display: inline-block;
         -webkit-background-clip: text;
         color: transparent;
@@ -17,10 +18,15 @@
     
     &:hover {
         transform: translateY(-1rem) scale(1.2);
+        color:white;
+        border:.24rem solid lighten($color-pink, 5%);
+        border-radius:1rem;
+        transition: all 145ms;
+        box-shadow: .5rem 2rem 4rem rgba($color-black, .6);
     }
 
     &__text {
-
+        color: $color-grey-light-1;
     }
     
 }

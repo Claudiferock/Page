@@ -1,17 +1,23 @@
 .header {
     height: 95vh;
-    background-image: linear-gradient(to right bottom, rgba(10, 9, 12, 0.1), rgba($color-black, 0.1)),url(../img/hero.JPG);
+    background-image: linear-gradient(65deg, rgba($color-black, .7) 20%, rgba($color-orange, .4) 85%, rgba($color-black, .5) 50%, rgba($color-orange, .4) 95%), url("https://i.gyazo.com/63ce4032fc879e329d3b0b78fcc87dc4.jpg");
     background-size: cover;
     background-position: top;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     position: relative;
 
+    @media (min-width: 30em) {
+        background-image: linear-gradient(to right bottom, rgba(0,0,0,.25) 55%, rgba($color-orange, .62) 85%, rgba(0,0,0,.25) 85.4%, rgba($color-orange, .68) 9%), url("https://i.gyazo.com/6253a2f4e94eb1f0586a8e51a83ff269.jpg");
+    }
+
     @include respond(phone-land) {
-        clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+        height: 85vh;
+        clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
     }
 
     @include respond(phone-port) {
-        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        height: 65vh;
+        clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 100%);
     }
 
     //this replaces a separate .header__profilePic-box {...}
@@ -19,6 +25,10 @@
         position: absolute;
         top: 4rem;
         left: 4rem;
+
+        @include respond(tab-land) {
+            transform: translate(20%, 20%);
+        }
 
         @include respond(phone-land) {
             margin-bottom: $gutter-vertical;
@@ -51,8 +61,7 @@
         }
 
         @include respond(phone-port) {
-            transform:scale(1.2);
-
+            transform:scale(1.1);
         }
 
         // replace separate .header__profilePic:hover {...}
@@ -70,10 +79,23 @@
 
             @include respond(tab-port-small) {
                 text-shadow: .2rem .1rem #858585;
+                outline: lighten($color-blue-dark, 30%) dashed .35rem;
             }
 
             @include respond(phone-land) {
+                box-shadow: 0 .15rem .4rem .1rem $color-pink-dark, .1rem .3rem 5rem .2rem $color-orange;
+                transition: all .5s ease-in;
                 outline: none;
+            }
+
+            @include respond(phone-port) {
+                outline-offset: -1.2rem;
+                outline: $color-pink double 1.2rem;
+                box-shadow: 0 .15rem 0 .1rem $color-pink-dark, .1rem .3rem 5rem .2rem $color-orange;
+                border: double 6rem;
+                border-color: $color-black;
+                transition: all 5s;
+                animation: spin infinite 3.5s cubic-bezier(.42,1.06,.63,-0.74);
             }
         }
     }
@@ -81,21 +103,21 @@
         position: absolute;
         top: 40%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-40%, -50%);
         background-color: rgba($color-orange-dark, .5);
         width: 60vw;
         margin-bottom: 6rem;
         text-align: center;
 
-        @include respond(tab-port) {
+        @include respond(tab-land) {
             margin-bottom: $gutter-vertical;
             width: 55vw;
-            transform: translate(-40%, -50%);
+            transform: translate(-25%, -50%);
         }
 
         @include respond(tab-port-small) {
             margin-bottom: $gutter-vertical;
-            transform: translate(-45%, -50%);
+            transform: translate(-15%, -50%);
         }
 
         @include respond(phone-land) {
@@ -106,7 +128,7 @@
 
         @include respond(phone-port) {
             margin-bottom: $gutter-vertical;
-            transform: translate(-50%, -20%);
+            transform: translate(-50%, -5%);
         }
 
         h1,

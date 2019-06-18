@@ -54,19 +54,29 @@ body {
 
 .disclaimer {
     font-size: 3.5rem;
-    background-color: $color-black;
-    color: $color-orange-dark;
+    background-color: rgba($color-black, .5);
+    color: rgba($color-orange-dark, .9);
     padding: 2.5rem;
     margin-top: -6rem;
     margin-bottom: 6rem;
     text-align: center;
     letter-spacing: .7rem;
-    border-radius: .85rem;
+    border-radius: .2rem .2rem 4.5rem 4.5rem;
 
     @include respond(phone-land) {
         font-size: 2.5rem;
         padding: 1rem;
         letter-spacing: 0;
+    }
+
+    &::before,
+    &::after {
+        content: '';
+        background: rgba(red, .6);
+        display: block;
+        width: 100%;
+        height: .4rem;
+        border-radius: 0rem .5rem;
     }
 }
 
@@ -77,15 +87,29 @@ body {
     line-height: 1.5;
     padding: 1rem 5rem;
     display: inline-block;
-    background-image: linear-gradient(to right, $color-bluegreen, $color-pink);
-    border-radius: 0 500rem 10rem 0;
-    transition: all 1s;
-    
-    &:not(:hover) {
-        -webkit-background-clip: text;
-        color: transparent;
-    }
+//    background-image: linear-gradient(to right, $color-bluegreen, $color-pink);
+//    border-radius: 0 500rem 10rem 0;
+//    transition: all 1s;
+//    
+//    &:not(:hover) {
+//        -webkit-background-clip: text;
+//        color: transparent;
+//    }
 
+}
+
+[class^="section-"] .heading-secondary {
+    background-image: linear-gradient(to right, $color-bluegreen, $color-pink);
+    -webkit-background-clip: text;
+    border-radius: 0 500rem 10rem 0;
+    color: transparent;
+}
+
+[class^="section-"]:hover .heading-secondary {
+    background-image: linear-gradient(to right, $color-bluegreen, $color-pink);
+    -webkit-background-clip: unset;
+    color: black;
+    transition: all 1s;
 }
 
 .line {
@@ -101,13 +125,17 @@ body {
 
 [class^="col-"] {
     transition: all 1s;
-    &:not(:hover) {
-        -webkit-background-clip: text;
-        color: transparent;
-    }
-    &:hover {
-        background-color: $color-black;
-    }
+    font-weight: 400;
+    letter-spacing: 0.0625em;
+//    &:not(:hover) {
+//        -webkit-background-clip: text;
+//        color: transparent;
+//    }
+//    &:hover {
+//        background-color: $color-black;
+//        color: $color-bluegreen !important;
+//        text-shadow: none !important;
+//    }
 }
 
 .heading-terciary {
