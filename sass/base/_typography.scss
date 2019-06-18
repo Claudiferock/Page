@@ -160,7 +160,12 @@ body {
     }
 }
 
-footer {
-    padding: 2rem;
+.footer {
+    background-image: linear-gradient(to right, $color-pink, $color-bluegreen);
+    border-radius: 0 500rem 500rem 300rem;
+    width: 30rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1.5rem;
     color: white;
 }

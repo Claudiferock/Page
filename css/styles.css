@@ -196,6 +196,15 @@ body {
     .paragraph {
       font-size: 2rem; } }
 
+.footer {
+  background-image: linear-gradient(to right, #ff456a, #588585);
+  border-radius: 0 500rem 500rem 300rem;
+  width: 30rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 1.5rem;
+  color: white; }
+
 .u-center-text {
   text-align: center; }
 
