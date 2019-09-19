@@ -23,18 +23,39 @@
                 left: -16%;
                 top: -2rem;
                 transform: rotate(62deg);
+
+                @include respond(tab-port-small) {
+                    left: -5%;
+                }
             }
 
             &--p2 {
                 right: -2rem;
                 top: 0rem;
                 transform: rotate(105deg);
+
+                @include respond(big-desktop) {
+                    left: 19%;
+                }
+
+                @include respond(tab-port-small) {
+                    left: 20%;
+                }
             }
 
             &--p3 {
                 left: 9%;
                 top: 3rem;
-                transform: rotate(90deg);
+                transform: rotate(84deg);
+
+                @include respond(big-desktop) {
+                    left: 64%;
+                }
+
+                @include respond(tab-port-small) {
+                    left: 50%;
+                    top: -4rem;
+                }
             }
 
             &:hover {

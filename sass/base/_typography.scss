@@ -53,7 +53,7 @@ body {
 }
 
 .disclaimer {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     background-color: rgba($color-black, .5);
     color: rgba($color-orange-dark, .9);
     padding: 2.5rem;
@@ -64,19 +64,30 @@ body {
     border-radius: .2rem .2rem 4.5rem 4.5rem;
 
     @include respond(phone-land) {
-        font-size: 2.5rem;
-        padding: 1rem;
+        font-size: 2.2rem;
+        padding: .4rem;
         letter-spacing: 0;
+    }
+
+    
+    @include respond(big-desktop) {
+        margin-left: -20%;
+        width: 140%;
     }
 
     &::before,
     &::after {
         content: '';
-        background: rgba(red, .6);
+        background: rgba(red, .5);
         display: block;
         width: 100%;
-        height: .4rem;
+        height: .25rem;
         border-radius: 0rem .5rem;
+
+        @include respond(phone-land) {
+            margin-left: 5%;
+            width: 90%;
+        }
     }
 }
 
@@ -143,9 +154,10 @@ body {
     font-weight: 700;
     text-transform: uppercase;
 
-    @include respond(phone-land) {
-        font-size: 2rem;
+    @include respond(tab-port-small) {
+        font-size: 2.6rem;
     }
+
 }
 
 .paragraph {
