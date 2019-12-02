@@ -387,6 +387,15 @@ body {
   .feature-box__text {
     color: #f7f7f7; }
 
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.8);
+  background-color: #fff;
+  color: aquamarine;
+  border-radius: 3px;
+  padding: 6rem; }
+
 .row {
   max-width: 114rem;
   background-color: transparent;
@@ -577,3 +586,7 @@ body {
     transform: skewY(7deg); }
   .section-features h2 {
     text-shadow: 0.2rem 0.1rem rgba(0, 0, 0, 0.2); }
+
+.section-stories {
+  padding: 15 rem 0;
+  background-color: rgba(255, 150, 94, 0.2); }
