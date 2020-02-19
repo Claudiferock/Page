@@ -1,16 +1,16 @@
 # 
 <h1 align='center'> :cloud:Claudio's Portfolio Page:cloud:</h1> 
 
-Hi! Im' Claudio :squirrel:
+Hi there! Im' Claudio :squirrel:
 
-This is my first attemp at creating a personal portfolio/cv page (You can find it **[here!](https://claudiferock.github.io/Page/)**). At the moment is more of a personal responsive page, but I plan to add elements to convert it into a progressive portfolio WebApp.
+This is my first attemp at creating a personal page (**[here!](https://claudiferock.github.io/Page/)**), which I was planning to turn into a portfolio/cv page, but I'll restructure the whole page with some framework (probably React).
 
-With this page I want to show that I can be creative and show something a little different and colourful, while still making it evident what the page is about.
+As of now, it's a responsive page tha uses only with HTML and SASS :sunglasses: where I have put some info about myslef, while trying to play around with the design and animations of the page.
 
 ------------------------------  
 <br />
 
-## Site-Status: :construction: Under construction
+## Site-Status: :construction: Under re-construction :rage3:
 
 At the moment the site isn't using any framework, only HTML and CSS, but that will change in the future as I add new features. The page was structured using floats (not flexbox nor grid) as I was practizing is use, but that might change soon and the site be restructured.
 
