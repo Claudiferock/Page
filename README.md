@@ -10,9 +10,9 @@ As of now, it's a responsive page tha uses only with HTML and SASS :sunglasses: 
 ------------------------------  
 <br />
 
-## Site-Status: :construction: Under re-construction :rage3:
+## Site-Status: :construction: Under re-construction 
 
-At the moment the site isn't using any framework, only HTML and CSS, but that will change in the future as I add new features. The page was structured using floats (not flexbox nor grid) as I was practizing is use, but that might change soon and the site be restructured.
+:rage3: This site doesn't use any framework and not even flexbox or grid to structure it, but it was a concious decision. I wanted to practice using floats to  structur it and same went for not using a framework, but now it's time to change that :feet:
 
 ***Landing page initial style and animation***<br />
 <a href="https://gyazo.com/abec9fcc48a47986f5bd749161a90b5f"><img src="https://i.gyazo.com/abec9fcc48a47986f5bd749161a90b5f.gif" alt="Gif hosted on Gyazo" width="512"/></a>
