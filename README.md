@@ -10,7 +10,7 @@ As of now, it's a responsive page tha uses only with HTML and SASS :sunglasses: 
 ------------------------------  
 <br />
 
-## Site-Status: :construction: Under re-construction 
+## Site-Status: :construction: To be renovated
 
 :rage3: This site doesn't use any framework and not even flexbox or grid to structure it, but it was a concious decision. I wanted to practice using floats to  structur it and same went for not using a framework, but now it's time to change that :feet:
 
