@@ -54,18 +54,24 @@ body {
 
 .disclaimer {
     font-size: 2.5rem;
-    background-color: rgba($color-black, .5);
-    color: rgba($color-orange-dark, .9);
-    padding: 2.5rem;
+    background: repeating-linear-gradient(45deg,yellow, yellow 10px, black 10px, black 20px);
+    width: 100%;
+    color: rgba(white, .9);
+    padding: .6rem 0;
     margin-top: -6rem;
     margin-bottom: 6rem;
     text-align: center;
     letter-spacing: .7rem;
-    border-radius: .2rem .2rem 4.5rem 4.5rem;
+    border: .1em solid red;
+
+    span{
+        background: rgba(red, 1);
+        padding: 0 1em;
+    }
 
     @include respond(phone-land) {
         font-size: 2.2rem;
-        padding: .4rem;
+        padding: .4rem 0;
         letter-spacing: 0;
     }
 
@@ -77,12 +83,11 @@ body {
 
     &::before,
     &::after {
-        content: '';
-        background: rgba(red, .5);
+        content: '🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨';
         display: block;
         width: 100%;
-        height: .25rem;
-        border-radius: 0rem .5rem;
+        height: 1em;
+        padding-bottom: 2em;
 
         @include respond(phone-land) {
             margin-left: 5%;
