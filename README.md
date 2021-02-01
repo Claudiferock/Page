@@ -3,14 +3,15 @@
 
 This is my first attemp at creating a personal page (**[here!](https://claudiferock.github.io/Page/)**)
 
-As of now, it's a responsive page that uses only HTML and SASS. It shows some info about myself, as well as some designs and animations I came up with while playing around with different options.
+It's a responsive page made only trough HTML and SASS, which shows some info about myself and some designs & animations I came up with while playing around with different options.
+The layout is made by using floats (for practice) that may change depending on the display size. 
 
 ------------------------------  
 <br />
 
-## Site-Status: :construction: To be replace by a new one in 2021
+## Site-Status: New version coming on 2021' Q1
 
-:rage3: This site doesn't use any framework and not even flexbox or grid for its layout (on purpose). I wanted to practice using floats to provide structure to the site,  but the next version of the page will use CSS grid and possibly React or Vue :feet:
+This site doesn't use any framework (other than a CSS preprocessor), but the next version will most likely be written on React or Vue. 
 
 ***Landing page initial style and animation***<br />
 <a href="https://gyazo.com/abec9fcc48a47986f5bd749161a90b5f"><img src="https://i.gyazo.com/abec9fcc48a47986f5bd749161a90b5f.gif" alt="Gif hosted on Gyazo" width="512"/></a>
