@@ -136,8 +136,9 @@ body {
   letter-spacing: .7rem;
   border: .1em solid red; }
   .disclaimer span {
-    background: red;
-    padding: 0 1em; }
+    background: rgba(255, 0, 0, 0.75);
+    padding: .2em 1em;
+    border-radius: 1px; }
   @media only screen and (max-width: 36em) {
     .disclaimer {
       font-size: 2.2rem;
@@ -317,14 +318,14 @@ body {
     .composition__photo--p1 {
       left: -16%;
       top: -2rem;
-      transform: rotate(62deg); }
+      transform: rotate(22deg); }
       @media only screen and (max-width: 48em) {
         .composition__photo--p1 {
           left: -5%; } }
     .composition__photo--p2 {
       right: -2rem;
       top: 0rem;
-      transform: rotate(105deg); }
+      transform: rotate(-25deg); }
       @media only screen and (min-width: 112.5em) {
         .composition__photo--p2 {
           left: 19%; } }
@@ -334,7 +335,7 @@ body {
     .composition__photo--p3 {
       left: 9%;
       top: 3rem;
-      transform: rotate(84deg); }
+      transform: rotate(44deg); }
       @media only screen and (min-width: 112.5em) {
         .composition__photo--p3 {
           left: 64%; } }
@@ -345,11 +346,11 @@ body {
     .composition__photo:hover {
       outline: 1rem solid #ff456a;
       top: 1rem;
-      transform: scale(1.3) rotate(90deg);
+      transform: scale(1.3) rotate(0deg);
       box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
       z-index: 20; }
   .composition:hover .composition__photo:not(:hover) {
-    transform: scale(0.92) rotate(90deg) translateY(-0.25rem); }
+    transform: scale(0.92) rotate(0deg) translateY(-0.25rem); }
 
 .feature-box {
   background-color: rgba(58, 87, 87, 0.8);
