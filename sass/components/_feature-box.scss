@@ -30,6 +30,10 @@
         color: transparent;
     }
     
+    &__text {
+        color: $color-grey-light-1;
+    }
+    
     &:hover {
         transform: translateY(-1rem) scale(1.2);
         color:white;
@@ -43,8 +47,6 @@
         }
     }
 
-    &__text {
-        color: $color-grey-light-1;
-    }
+
     
 }

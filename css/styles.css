@@ -171,19 +171,21 @@ body {
   background-image: linear-gradient(to right, #588585, #ff456a);
   -webkit-background-clip: text;
   border-radius: 0 500rem 10rem 0;
+  text-shadow: 0.5px 0.5px 1.2em rgba(0, 0, 0, 0.25);
   color: transparent; }
 
 [class^="section-"]:hover .heading-secondary {
   background-image: linear-gradient(to right, #588585, #ff456a);
   -webkit-background-clip: unset;
-  color: black;
+  color: #f7f7f7;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.85);
   transition: all 1s; }
 
 .line {
   background-image: linear-gradient(to right, #588585, #ff456a);
   width: inherit;
   height: .5rem;
-  opacity: .5; }
+  opacity: .75; }
   @media only screen and (max-width: 36em) {
     .line {
       height: .2rem; } }
@@ -196,10 +198,17 @@ body {
 .heading-terciary {
   font-size: 1.6rem;
   font-weight: 700;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: #ff456a;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.85);
+  transition: color 200ms ease-in-out, text-shadow 250ms linear; }
   @media only screen and (max-width: 48em) {
     .heading-terciary {
       font-size: 2.6rem; } }
+
+.feature-box:hover .heading-terciary {
+  color: #f7f7f7;
+  text-shadow: 0.2em 0.2em 0.1em #ff456a; }
 
 .paragraph {
   font-size: 1.6rem; }
@@ -216,7 +225,8 @@ body {
   font-size: 1.5rem;
   font-weight: 600;
   padding: 1.5rem;
-  color: white; }
+  color: white;
+  text-shadow: 0.1em 0.1em 0.05em rgba(0, 0, 0, 0.75); }
 
 .u-center-text {
   text-align: center; }
@@ -379,6 +389,8 @@ body {
     display: inline-block;
     -webkit-background-clip: text;
     color: transparent; }
+  .feature-box__text {
+    color: #f7f7f7; }
   .feature-box:hover {
     transform: translateY(-1rem) scale(1.2);
     color: white;
@@ -389,8 +401,6 @@ body {
     @media only screen and (max-width: 48em) {
       .feature-box:hover {
         transform: translateY(-0.5rem) scale(1.1); } }
-  .feature-box__text {
-    color: #f7f7f7; }
 
 .row {
   max-width: 114rem;

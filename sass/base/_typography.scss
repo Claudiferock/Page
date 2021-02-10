@@ -119,13 +119,15 @@ body {
     background-image: linear-gradient(to right, $color-bluegreen, $color-pink);
     -webkit-background-clip: text;
     border-radius: 0 500rem 10rem 0;
+    text-shadow: .5px .5px 1.2em rgba(0,0,0,.25);
     color: transparent;
 }
 
 [class^="section-"]:hover .heading-secondary {
     background-image: linear-gradient(to right, $color-bluegreen, $color-pink);
     -webkit-background-clip: unset;
-    color: black;
+    color: $color-grey-light-1;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.85);
     transition: all 1s;
 }
 
@@ -133,7 +135,7 @@ body {
     background-image: linear-gradient(to right, $color-bluegreen, $color-pink);
     width: inherit;
     height: .5rem;
-    opacity: .5;
+    opacity: .75;
 
     @include respond(phone-land) {
         height: .2rem;
@@ -159,11 +161,21 @@ body {
     font-size: 1.6rem;
     font-weight: 700;
     text-transform: uppercase;
+    color: $color-pink;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.85);
+    transition: color 200ms ease-in-out, text-shadow 250ms linear;
 
     @include respond(tab-port-small) {
         font-size: 2.6rem;
     }
+    
+}
 
+.feature-box:hover {
+    .heading-terciary {
+        color: $color-grey-light-1;
+        text-shadow: .2em .2em .1em $color-pink;
+    }
 }
 
 .paragraph {
@@ -186,4 +198,5 @@ body {
     font-weight: 600;
     padding: 1.5rem;
     color: white;
+    text-shadow: .1em .1em .05em rgba(0,0,0,.75);
 }
