@@ -121,6 +121,7 @@ body {
     border-radius: 0 500rem 10rem 0;
     text-shadow: .5px .5px 1.2em rgba(0,0,0,.25);
     color: transparent;
+    transition: all 1s;
 }
 
 [class^="section-"]:hover .heading-secondary {
@@ -128,7 +129,7 @@ body {
     -webkit-background-clip: unset;
     color: $color-grey-light-1;
     text-shadow: 1px 1px 2px rgba(0,0,0,.85);
-    transition: all 1s;
+    animation: moveUp 300ms ease-in-out;
 }
 
 .line {

@@ -33,6 +33,14 @@ ORDER: Base + Typography > general layout + grid > page layout > components
     opacity: 1;
     transform: translate(0); } }
 
+@keyframes moveUp2 {
+  from {
+    opacity: 0;
+    transform: translateY(2rem); }
+  to {
+    opacity: 1;
+    transform: translate(0); } }
+
 @keyframes appear {
   0% {
     opacity: 0; }
@@ -172,14 +180,15 @@ body {
   -webkit-background-clip: text;
   border-radius: 0 500rem 10rem 0;
   text-shadow: 0.5px 0.5px 1.2em rgba(0, 0, 0, 0.25);
-  color: transparent; }
+  color: transparent;
+  transition: all 1s; }
 
 [class^="section-"]:hover .heading-secondary {
   background-image: linear-gradient(to right, #588585, #ff456a);
   -webkit-background-clip: unset;
   color: #f7f7f7;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.85);
-  transition: all 1s; }
+  animation: moveUp 300ms ease-in-out; }
 
 .line {
   background-image: linear-gradient(to right, #588585, #ff456a);
