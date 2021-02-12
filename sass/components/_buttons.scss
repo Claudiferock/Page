@@ -59,6 +59,7 @@
 
 .btn-text {
     border-radius: .8rem;
+    padding: .5em 1em !important;
     &:link,
     &:visited {
         font-size: $default-font-size;
@@ -81,4 +82,8 @@
         box-shadow: 0 .5rem 1rem rgba($color-black, .15);
         transform: translateY(0px);
     }
+}
+
+.buttons-container a:not(last-child){
+    margin-right: 1.4em;
 }
