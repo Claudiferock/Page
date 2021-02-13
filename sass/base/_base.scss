@@ -8,6 +8,7 @@
 }
 
 html {
+    scroll-behavior: smooth;
     /* converted to  10px so it's easier to use rem values */
     /* 10px is 62.5% of the root default size (16px) */
     // therefore it defines what 1 rem is for the whole page
