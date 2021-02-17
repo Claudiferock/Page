@@ -84,6 +84,16 @@
     }
 }
 
-.buttons-container a:not(last-child){
-    margin-right: 1.4em;
+.buttons-container {
+    margin-top: 2em;
+
+    &:first-of-type{
+        margin-bottom: 2.5em;
+    }
+    & a {
+        margin: 0;
+        &:not(last-child){
+            margin-right: 1.4em;
+        }
+    }
 }

@@ -173,6 +173,8 @@ body {
     
 }
 
+//#about-content:last-of-type
+
 .feature-box:hover {
     .heading-terciary {
         color: $color-grey-light-1;
@@ -182,10 +184,6 @@ body {
 
 .paragraph {
     font-size: 1.6rem;
-
-    &:not(:last-child) {
-        margin-bottom: 3rem;
-    }
 
     @include respond(phone-land) {
         font-size: 2rem;

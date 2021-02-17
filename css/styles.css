@@ -223,8 +223,6 @@ body {
 
 .paragraph {
   font-size: 1.6rem; }
-  .paragraph:not(:last-child) {
-    margin-bottom: 3rem; }
   @media only screen and (max-width: 36em) {
     .paragraph {
       font-size: 2rem; } }
@@ -320,8 +318,14 @@ body {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     transform: translateY(0px); }
 
-.buttons-container a:not(last-child) {
-  margin-right: 1.4em; }
+.buttons-container {
+  margin-top: 2em; }
+  .buttons-container:first-of-type {
+    margin-bottom: 2.5em; }
+  .buttons-container a {
+    margin: 0; }
+    .buttons-container a:not(last-child) {
+      margin-right: 1.4em; }
 
 .composition {
   position: relative;
