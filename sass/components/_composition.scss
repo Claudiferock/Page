@@ -16,16 +16,16 @@
         }
 
         @include respond(tab-port) {
-            width: 55%;
+            width: 40%;
         }
 
             &--p1 {
-                left: -16%;
-                top: -2rem;
+                left: -10%;
+                top: -10rem;
                 transform: rotate(22deg);
 
                 @include respond(tab-port-small) {
-                    left: -5%;
+                    left: 8%;
                 }
             }
 
@@ -46,7 +46,7 @@
             &--p3 {
                 left: 9%;
                 top: 3rem;
-                transform: rotate(44deg);
+                transform: rotate(-4deg);
 
                 @include respond(big-desktop) {
                     left: 64%;

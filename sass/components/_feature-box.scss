@@ -1,9 +1,14 @@
 .section-features {
     background-image: linear-gradient(to right bottom, rgba(0,0,0,.25) 75%, rgba(0, 0, 0, .75)), url("https://raw.githubusercontent.com/Claudiferock/Page/master/img/mökki.sunset.jpg") !important;
-    background-size: fit;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: right;
     position: relative;
+    
+    @include respond(tab-port-small) {
+        background-size: fit;
+        background-position: top;
+    }
 }
 
 .feature-box {

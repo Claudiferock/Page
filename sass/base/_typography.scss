@@ -142,6 +142,10 @@ body {
     @include respond(phone-land) {
         font-size: 2rem;
     }
+
+    br {
+        margin-bottom: .5em;
+    }
 }
 
 .footer {

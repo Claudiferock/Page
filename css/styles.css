@@ -190,6 +190,8 @@ body {
   @media only screen and (max-width: 36em) {
     .paragraph {
       font-size: 2rem; } }
+  .paragraph br {
+    margin-bottom: .5em; }
 
 .footer {
   display: flex;
@@ -308,14 +310,14 @@ body {
         width: 85%; } }
     @media only screen and (max-width: 56.26em) {
       .composition__photo {
-        width: 55%; } }
+        width: 40%; } }
     .composition__photo--p1 {
-      left: -16%;
-      top: -2rem;
+      left: -10%;
+      top: -10rem;
       transform: rotate(22deg); }
       @media only screen and (max-width: 48em) {
         .composition__photo--p1 {
-          left: -5%; } }
+          left: 8%; } }
     .composition__photo--p2 {
       right: -2rem;
       top: 0rem;
@@ -329,7 +331,7 @@ body {
     .composition__photo--p3 {
       left: 9%;
       top: 3rem;
-      transform: rotate(44deg); }
+      transform: rotate(-4deg); }
       @media only screen and (min-width: 112.5em) {
         .composition__photo--p3 {
           left: 64%; } }
@@ -348,10 +350,14 @@ body {
 
 .section-features {
   background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.25) 75%, rgba(0, 0, 0, 0.75)), url("https://raw.githubusercontent.com/Claudiferock/Page/master/img/mökki.sunset.jpg") !important;
-  background-size: fit;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
   position: relative; }
+  @media only screen and (max-width: 48em) {
+    .section-features {
+      background-size: fit;
+      background-position: top; } }
 
 .feature-box {
   background-color: rgba(58, 87, 87, 0.8);
