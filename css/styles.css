@@ -195,14 +195,13 @@ body {
 
 .footer {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   font-size: 3em;
   font-weight: 600;
   padding: .5em;
   color: #FF1845;
-  right: 0;
-  text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.75); }
+  right: 0; }
 
 .u-center-text {
   text-align: center; }
