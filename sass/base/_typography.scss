@@ -138,13 +138,14 @@ body {
 
 .paragraph {
     font-size: 1.6rem;
+    line-height: 1.4;
 
     @include respond(phone-land) {
         font-size: 2rem;
     }
 
     br {
-        margin-bottom: .5em;
+        margin-bottom: .6em;
     }
 }
 

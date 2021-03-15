@@ -58,7 +58,7 @@
             box-shadow: 2rem 5rem 4rem rgba($color-black, .6);
         }
         width: calc((100% - #{$gutter-horizontal}) / 2);
-        color: lighten($color-bluegreen, 15%);
+        color: lighten($color-bluegreen, 25%);
         padding: $gutter-horizontal-small;
         border-radius: 1rem;
     }

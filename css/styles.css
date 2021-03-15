@@ -186,12 +186,13 @@ body {
   text-shadow: 0.2em 0.2em 0.1em #ff456a; }
 
 .paragraph {
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  line-height: 1.4; }
   @media only screen and (max-width: 36em) {
     .paragraph {
       font-size: 2rem; } }
   .paragraph br {
-    margin-bottom: .5em; }
+    margin-bottom: .6em; }
 
 .footer {
   display: flex;
@@ -441,7 +442,7 @@ body {
         width: 60%; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2);
-    color: #7faaaa;
+    color: #9ebfbf;
     padding: 3rem;
     border-radius: 1rem; }
     .row .col-1-of-2:not(:last-child) {
@@ -460,7 +461,7 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(65deg, rgba(0, 0, 0, 0.1) 75%, rgba(255, 255, 0, 0.5)), url("https://raw.githubusercontent.com/Claudiferock/Page/master/img/hero-land-small.jpg");
+  background-image: linear-gradient(65deg, rgba(0, 0, 0, 0.1) 75%, rgba(255, 173, 129, 0.25)), url("https://raw.githubusercontent.com/Claudiferock/Page/master/img/hero-land-small.jpg");
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
