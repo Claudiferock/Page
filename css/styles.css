@@ -374,13 +374,23 @@ body {
   text-align: center;
   border-radius: 3px;
   box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.4);
+  overflow: auto;
+  scrollbar-color: #ff456a black;
+  scrollbar-width: thin;
   transition: transform .3s; }
-  @media only screen and (max-width: 48em) {
+  .feature-box::-webkit-scrollbar {
+    width: .5em;
+    background-color: black; }
+  .feature-box::-webkit-scrollbar-thumb {
+    background-color: #ff456a;
+    height: 60%;
+    border: .01em solid black; }
+  @media only screen and (max-width: 56.26em) {
     .feature-box {
       font-size: 2rem;
       padding: 2rem;
       margin: 2rem -2rem;
-      height: 36rem; } }
+      height: 30rem; } }
   @media only screen and (max-width: 30em) {
     .feature-box {
       font-size: 2.2rem;
@@ -392,7 +402,8 @@ body {
     background-image: linear-gradient(to right, #c2e59c, #ff456a);
     display: inline-block;
     -webkit-background-clip: text;
-    color: transparent; }
+    color: transparent;
+    transition: font-size 250ms ease-in-out; }
   .feature-box__text {
     color: #f7f7f7; }
   .feature-box:hover {
@@ -401,10 +412,17 @@ body {
     border: 0.24rem solid #ff5f7e;
     border-radius: 1rem;
     transition: all 145ms;
-    box-shadow: 0.5rem 2rem 4rem rgba(0, 0, 0, 0.6); }
+    box-shadow: 0.5rem 2rem 4rem rgba(0, 0, 0, 0.6);
+    scrollbar-width: unset; }
+    .feature-box:hover .feature-box__icon {
+      font-size: 2rem;
+      color: #ff456a; }
     @media only screen and (max-width: 48em) {
       .feature-box:hover {
-        transform: translateY(-0.5rem) scale(1.1); } }
+        transform: translateY(0) scale(1); }
+        .feature-box:hover .feature-box__icon {
+          font-size: 4rem;
+          color: #ff456a; } }
 
 .row {
   max-width: 114rem;

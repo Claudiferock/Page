@@ -19,28 +19,42 @@
     text-align:center;
     border-radius:3px;
     box-shadow: 0 1.5rem 3rem rgba($color-black, .4);
+    overflow: auto;
+    scrollbar-color: $color-pink black;
+    scrollbar-width: thin;
+    &::-webkit-scrollbar {
+        width: .5em;
+        background-color: black;
+      }
+    &::-webkit-scrollbar-thumb {
+        background-color: $color-pink;
+        height: 60%;
+        border: .01em solid black;
+      }
     transition: transform .3s;
-
-    @include respond(tab-port-small) {
+        
+    @include respond(tab-port) {
         font-size: 2rem;
         padding: 2rem;
         margin: 2rem -2rem;
-        height: 36rem;
+        height: 30rem;
     }
-
+    
     @include respond(phone-port) {
         font-size: 2.2rem;
         padding: 2.4rem;
         margin: -6rem 0rem;
         height: 42rem;
     }
-
+    
     &__icon {
         font-size: 6rem;
         background-image: linear-gradient(to right, $color-green-light, $color-pink);
         display: inline-block;
         -webkit-background-clip: text;
         color: transparent;
+
+        transition: font-size 250ms ease-in-out;
     }
     
     &__text {
@@ -54,12 +68,20 @@
         border-radius:1rem;
         transition: all 145ms;
         box-shadow: .5rem 2rem 4rem rgba($color-black, .6);
+        scrollbar-width: unset;
 
+        .feature-box__icon {
+            font-size: 2rem;
+            color: $color-pink;
+        }
+        
         @include respond(tab-port-small) {
-            transform: translateY(-0.5rem) scale(1.1);
+            transform: translateY(0) scale(1);
+            .feature-box__icon {
+                font-size: 4rem;
+                color: $color-pink;
+            }
         }
     }
-
-
     
 }
