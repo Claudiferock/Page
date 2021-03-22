@@ -14,3 +14,7 @@ This site doesn't use frameworks other than a CSS pre-processor (Sass), but the 
 
 ***Initial page style***<br />
 <a href="https://gyazo.com/abec9fcc48a47986f5bd749161a90b5f"><img src="https://i.gyazo.com/abec9fcc48a47986f5bd749161a90b5f.gif" alt="Gif hosted on Gyazo" width="512"/></a>
+
+# Technology
+- [Sass](https://sass-lang.com/guide) (UI)
+- [GitHub Pages](https://pages.github.com/) (Hosting)
