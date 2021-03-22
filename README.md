@@ -1,20 +1,16 @@
 # 
 <h1 align='center'> :cloud: Welcome to Claudio's Page:cloud:</h1>
 
-This is my first attemp at creating a personal page (**[here!](https://claudiferock.github.io/Page/)**)
+This is my first attempt at creating a personal page (**[here!](https://claudiferock.github.io/Page/)**)
 
-It's a responsive page made only trough HTML and SASS, which shows some info about myself and some designs & animations I came up with while playing around with different options.
-The layout is made by using floats (for practice) that may change depending on the display size. 
+It's a responsive page made only through  HTML and Sass. This page gives some information about myself and links to my social networks and coding related profiles.
 
 ------------------------------  
 <br />
 
-## Site-Status: New version coming on 2021' Q1
+## Site-Status: Updated text and UI, while working on a reconstructed version.
 
-This site doesn't use any framework (other than a CSS preprocessor), but the next version will most likely be written on React or Vue. 
+This site doesn't use frameworks other than a CSS pre-processor (Sass), but the next version will most likely be written on React or Vue. The layout was initially made by using floats on purpose (to practice), but it will also definitely change for next version. 
 
-***Landing page initial style and animation***<br />
+***Initial page style***<br />
 <a href="https://gyazo.com/abec9fcc48a47986f5bd749161a90b5f"><img src="https://i.gyazo.com/abec9fcc48a47986f5bd749161a90b5f.gif" alt="Gif hosted on Gyazo" width="512"/></a>
-
-***Responsive to different viewports: example #1***<br />
-<a href="https://gyazo.com/9df2f688223b06460555d0c444198f54"><img src="https://i.gyazo.com/9df2f688223b06460555d0c444198f54.gif" alt="Gif hosted on Gyazo" width="512"/> - Click to watch</a>
