@@ -1,9 +1,7 @@
 # 
 <h1 align='center'> :cloud: Welcome to Claudio's Page:cloud:</h1>
 
-This is my first attempt at creating a personal page (**[here!](https://claudiferock.github.io/Page/)**)
-
-It's a responsive page made only through  HTML and Sass. This page gives some information about myself and links to my social networks and coding related profiles.
+This is my first attempt at creating a personal page (**[here!](https://claudiferock.github.io/Page/)**). It's a responsive page made only through  HTML and Sass. This page gives some information about myself and links to my social networks and coding related profiles.
 
 ------------------------------  
 <br />
