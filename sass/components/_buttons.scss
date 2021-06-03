@@ -15,6 +15,7 @@
             stroke: #FF1845;
           }
         }
+        
     }
 
     &::after {
@@ -121,3 +122,9 @@
     }
 }
 
+@include respond(tab-port-small) {
+  .arrow-down {
+    width: 40px;
+    height: 40px;
+  }
+}
