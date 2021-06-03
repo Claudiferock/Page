@@ -219,12 +219,16 @@ body {
 .u-margin-top-8-minus {
   margin-top: -8rem; }
 
-.btn--white {
-  background-color: rgba(255, 255, 255, 0.9);
-  color: #777;
-  font-size: 1.4rem; }
-  .btn--white::after {
-    background-color: rgba(255, 255, 255, 0.9); }
+.btn--white .arrow-down {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 36;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 300ms ease-in; }
+
+.btn--white:hover .arrow-down {
+  stroke: #FF1845; }
 
 .btn::after {
   content: '';
