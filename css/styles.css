@@ -295,6 +295,11 @@ body {
   .btn-text:active {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     transform: translateY(0px); }
+  .btn-text img {
+    width: 2rem;
+    height: 2rem; }
+    .btn-text img svg {
+      fill: blue; }
 
 .buttons-container {
   margin-top: 2em; }

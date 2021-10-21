@@ -106,6 +106,15 @@
         box-shadow: 0 .5rem 1rem rgba($color-black, .15);
         transform: translateY(0px);
     }
+
+    img {
+        width: 2rem;
+        height: 2rem;
+        & svg {
+            fill: blue;
+
+        }
+    }
 }
 
 .buttons-container {
