@@ -117,8 +117,14 @@
     }
 }
 
+a, a:hover, a:focus, a:active {
+    outline: 0;
+    text-decoration: none;
+    color: inherit;
+}
+
 .buttons-container {
-    margin-top: 2em;
+/*     margin-top: 2em;
 
     &:first-of-type{
         margin-bottom: 2.5em;
@@ -128,8 +134,94 @@
         &:not(last-child){
             margin-right: 1.4em;
         }
+    } */
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2rem 0;
+
+}
+
+.btn-social-icon:hover, .btn-social-icon:focus {
+   .social-icon {
+       fill: white;
+       /* box-shadow: 0 .5rem .5rem rgba($color-pink, .25); */
+   }
+}
+
+.social-icon {
+    aspect-ratio: 1;
+    height: 5rem;
+    fill: $color-pink;
+    border-radius: 50%;
+    transition: fill 300ms ease-in-out;
+}
+
+.inner-social-icon {
+    fill: black;
+}
+
+.btn-download {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* position: relative; */
+    /* width: 45%; */
+    text-decoration: none;
+    border-radius: .8rem;
+    outline: 1px solid $color-pink;
+    /* margin: 2rem auto 0 !important; */
+    padding: 0 !important;
+    padding-inline-start: 1rem;
+    padding-inline-end: 0 !important;
+    overflow: hidden;
+    
+    & .btn-download-cv, .download-arrow {
+        /* position: absolute; */
+        /* display: block; */
+        /* height: 100%; */
+        text-align: center;
+        transition: all 300ms ease-in-out;
+    }
+    
+    & .btn-download-cv {
+        color: $color-pink;
+        padding: 0 1rem;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    
+    & .download-arrow {
+        background-color: $color-pink;
+        display: -webkit-inline-box;
+        padding: 1rem;
+        vertical-align: baseline;
+        
+        .arrow {
+            height: 3rem;
+        }
+    }
+    
+    &:hover, &:focus {
+        outline-color: $color-pink;
+        background-color: $color-pink;
+        & .btn-download-cv {
+            transform: translateX(-20rem);
+            color: #fff;
+            /* width: 0; */
+        }
+        
+        & .download-arrow {
+            /* width: 100%; */
+            background-color: $color-pink;
+            fill: #fff;
+            transform: translateX(-150%) scale(1.5);
+            /* transform: scaleX(2rem); */
+        }
     }
 }
+
 
 @include respond(tab-port-small) {
   .arrow-down {

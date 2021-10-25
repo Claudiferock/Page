@@ -53,6 +53,23 @@ ORDER: Base + Typography > general layout + grid > page layout > components
   to {
     transform: rotate(360deg); } }
 
+@keyframes arrowGone {
+  from {
+    transform: rotate(0deg) translateX(-100%); }
+  25% {
+    transform: rotate(360deg);
+    color: cyan; }
+  30% {
+    transform: translateY(3em); }
+  75% {
+    transform: scale(0); }
+  80% {
+    transform: translateY(0em) scale(0.1); }
+  95% {
+    transform: scale(1.5); }
+  to {
+    transform: scale(1) translateX(-100%); } }
+
 *,
 *::after,
 *::before {
@@ -219,6 +236,9 @@ body {
 .u-margin-top-8-minus {
   margin-top: -8rem; }
 
+.arrow-gone {
+  animation: arrowGone 1.25s ease-in-out; }
+
 .btn--white .arrow-down {
   fill: none;
   stroke: #fff;
@@ -301,14 +321,87 @@ body {
     .btn-text img svg {
       fill: blue; }
 
+a, a:hover, a:focus, a:active {
+  outline: 0;
+  text-decoration: none;
+  color: inherit; }
+
 .buttons-container {
-  margin-top: 2em; }
-  .buttons-container:first-of-type {
-    margin-bottom: 2.5em; }
-  .buttons-container a {
-    margin: 0; }
-    .buttons-container a:not(last-child) {
-      margin-right: 1.4em; }
+  /*     margin-top: 2em;
+
+    &:first-of-type{
+        margin-bottom: 2.5em;
+    }
+    & a {
+        margin: 0;
+        &:not(last-child){
+            margin-right: 1.4em;
+        }
+    } */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2rem 0; }
+
+.btn-social-icon:hover .social-icon, .btn-social-icon:focus .social-icon {
+  fill: white;
+  /* box-shadow: 0 .5rem .5rem rgba($color-pink, .25); */ }
+
+.social-icon {
+  aspect-ratio: 1;
+  height: 5rem;
+  fill: #ff456a;
+  border-radius: 50%;
+  transition: fill 300ms ease-in-out; }
+
+.inner-social-icon {
+  fill: black; }
+
+.btn-download {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* position: relative; */
+  /* width: 45%; */
+  text-decoration: none;
+  border-radius: .8rem;
+  outline: 1px solid #ff456a;
+  /* margin: 2rem auto 0 !important; */
+  padding: 0 !important;
+  padding-inline-start: 1rem;
+  padding-inline-end: 0 !important;
+  overflow: hidden; }
+  .btn-download .btn-download-cv, .btn-download .download-arrow {
+    /* position: absolute; */
+    /* display: block; */
+    /* height: 100%; */
+    text-align: center;
+    transition: all 300ms ease-in-out; }
+  .btn-download .btn-download-cv {
+    color: #ff456a;
+    padding: 0 1rem;
+    font-size: 2rem;
+    font-weight: bold; }
+  .btn-download .download-arrow {
+    background-color: #ff456a;
+    display: -webkit-inline-box;
+    padding: 1rem;
+    vertical-align: baseline; }
+    .btn-download .download-arrow .arrow {
+      height: 3rem; }
+  .btn-download:hover, .btn-download:focus {
+    outline-color: #ff456a;
+    background-color: #ff456a; }
+    .btn-download:hover .btn-download-cv, .btn-download:focus .btn-download-cv {
+      transform: translateX(-20rem);
+      color: #fff;
+      /* width: 0; */ }
+    .btn-download:hover .download-arrow, .btn-download:focus .download-arrow {
+      /* width: 100%; */
+      background-color: #ff456a;
+      fill: #fff;
+      transform: translateX(-150%) scale(1.5);
+      /* transform: scaleX(2rem); */ }
 
 @media only screen and (max-width: 48em) {
   .arrow-down {
