@@ -44,3 +44,28 @@
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
+
+@keyframes arrowGone{
+    from {
+      transform: rotate(0deg) translateX(-100%);
+    }
+    25% {
+      transform: rotate(360deg);
+      color: cyan;
+    }
+    30%{
+      transform: translateY(3em);
+    }
+    75% {
+      transform: scale(0);
+    }
+    80% {
+      transform: translateY(0em) scale(.1);
+    }
+    95% {
+      transform: scale(1.5);
+    }
+    to{
+      transform: scale(1)  translateX(-100%);
+    }
+  }
