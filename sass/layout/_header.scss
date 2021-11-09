@@ -68,8 +68,9 @@
         top: 40%;
         left: 50%;
         transform: translate(-40%, -50%);
-        background-color: rgba(0,0,0, .25);
+        background-color: rgba($color-blue-dark, .25);
         border: 1px solid rgba($color-pink, .75);
+        backdrop-filter: blur(.215rem);
         border-radius: 5px;
         width: 60vw;
         padding: $gutter-horizontal-small 0;

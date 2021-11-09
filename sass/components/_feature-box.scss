@@ -12,7 +12,8 @@
 }
 
 .feature-box {
-    background-color: darken(rgba($color-bluegreen, .8), 15%);
+    background-color: darken(rgba($color-bluegreen, .5), 15%);
+    backdrop-filter: blur(.215rem);
     font-size:1.5rem;
     padding:2.5rem;
     height: 40rem;
